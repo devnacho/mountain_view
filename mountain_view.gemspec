@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Ignacio Gutierrez", "Esteban Pastorino"]
   s.email       = ["nachojgutierrez@gmail.com", "ejpastorino@gmail.com"]
   s.homepage    = "http://github.com/jgnatch/mountain_view"
-  s.summary     = "View components for Rails."
-  s.description = "View components for Rails."
+  s.summary     = "UI components API for Rails."
+  s.description = "UI components API for Rails."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
