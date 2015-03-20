@@ -2,7 +2,7 @@ require 'mountain_view'
 require 'rails'
 
 module MountainView
-  class Engine < Rails::Engine
+  class Engine < ::Rails::Engine
     initializer "mountain_view.assets" do |app|
       Rails.application.config.assets.paths << app.root.join("app", "components")
     end
