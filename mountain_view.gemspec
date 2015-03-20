@@ -7,11 +7,11 @@ require "mountain_view/version"
 Gem::Specification.new do |s|
   s.name        = "mountain_view"
   s.version     = MountainView::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MountainView."
-  s.description = "TODO: Description of MountainView."
+  s.authors     = ["Ignacio Gutierrez", "Esteban Pastorino"]
+  s.email       = ["nachojgutierrez@gmail.com", "ejpastorino@gmail.com"]
+  s.homepage    = "http://github.com/jgnatch/mountain_view"
+  s.summary     = "View components for Rails."
+  s.description = "View components for Rails."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
