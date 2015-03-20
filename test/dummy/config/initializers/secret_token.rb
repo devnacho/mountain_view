@@ -1,0 +1,7 @@
+config = Rails.application.config
+
+if Rails.version < "4"
+  config.secret_token = "9d76a23b9db93c4389e77a2df463b465330736159192f69cf79a862eb3aa2d2cc002dd28ed5c2a8391cba8fb5dc0d93ec36a1a42c6e772276518c4e3b26f18b7"
+else
+  config.secret_key_base = "9d76a23b9db93c4389e77a2df463b465330736159192f69cf79a862eb3aa2d2cc002dd28ed5c2a8391cba8fb5dc0d93ec36a1a42c6e772276518c4e3b26f18b7"
+end

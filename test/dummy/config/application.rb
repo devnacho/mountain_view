@@ -1,6 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'rails/all'
+require "active_support"
+require "action_controller"
+require "action_view"
+require "sprockets/railtie"
 
 Bundler.require(*Rails.groups)
 require "mountain_view"
@@ -18,6 +21,9 @@ module Dummy
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    # support newer rails without warnings
+    config.active_support.test_order = :random rescue nil
   end
 end
 
