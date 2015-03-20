@@ -9,13 +9,17 @@ class MountainViewTest < ActionDispatch::IntegrationTest
 
   test "stylesheets are properly served" do
     get "/assets/mountain_view.css"
+
     assert_response :success
+    assert_match(/\.header {/, response.body)
     refute_match(/FileNotFound/, response.body)
   end
 
   test "javascripts are properly served" do
     get "/assets/mountain_view.js"
+
     assert_response :success
+    assert_match(/console\.log\('header'\)/, response.body)
     refute_match(/FileNotFound/, response.body)
   end
 
