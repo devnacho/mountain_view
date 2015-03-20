@@ -7,14 +7,16 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     assert_equal ::Rails::Engine, MountainView::Engine.superclass
   end
 
-  test "stylesheets are served" do
+  test "stylesheets are properly served" do
     get "/assets/mountain_view.css"
     assert_response :success
+    refute_match(/FileNotFound/, response.body)
   end
 
-  test "javascripts are served" do
+  test "javascripts are properly served" do
     get "/assets/mountain_view.js"
     assert_response :success
+    refute_match(/FileNotFound/, response.body)
   end
 
   private
