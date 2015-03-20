@@ -45,13 +45,19 @@ You can then call your components on any view by using the following
 helper:
 
 ```erb
-<%= ui_component "header", { title: "This is a title", subtitle: "And this is a subtitle" } %>
+<%= ui_component "header", title: "This is a title", subtitle: "And this is a subtitle" %>
 ```
 
+### Assets
+You can require all the components CSS and JS automatically by requiring `mountain_view` in you main JS and CSS files.
+
+```
+//= require mountain_view
+```
 
 ## Contributing
 
-1. Fork it ( http://github.com/jgnatch/mountain_view/fork )
+1. Fork it ([https://github.com/jgnatch/mountain_view/fork](https://github.com/jgnatch/mountain_view/fork))
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
