@@ -1,4 +1,6 @@
 <div class="header">
-  <h1>This is a header component with the title: <%= properties[:title] %></h1>
-  <h3>And subtitle <%= properties[:subtitle]</h3>
+  <h1><%= properties[:title] %></h1>
+  <%- if properties[:subtitle] %>
+    <h3><%= properties[:subtitle] %></h3>
+  <% end %>
 </div>

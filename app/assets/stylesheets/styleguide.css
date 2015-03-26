@@ -1,0 +1,88 @@
+/*
+*= require mountain_view
+*/
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* HEADER */
+.mv-header{
+  background: #777;
+  padding: 20px;
+}
+.mv-header__logo{
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+
+/* FlEX WRAPPER */
+
+.mv-flex-wrapper{
+  display: flex;
+}
+
+/* SIDEBAR */
+.mv-sidebar{
+  background: #F7F7F7;
+  width: 18%;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  padding: 30px 20px;
+  flex:1;
+  min-height: 100vh;
+}
+
+.mv-sidebar h3{
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.mv-sidebar ul{
+}
+
+.mv-sidebar ul li{
+  margin-bottom: 20px;
+}
+
+.mv-sidebar ul li a{
+  color:#555;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.mv-sidebar ul li a:hover{
+  color:#000;
+}
+
+/* MAIN */
+.mv-main{
+  box-sizing: border-box;
+  width: 82%;
+  float:left;
+  padding: 30px 60px;
+}
+.mv-main__header{
+  margin-bottom: 40px;
+}
+
+.mv-main__header h1{
+  font-weight: 100;
+  font-size: 55px;
+  color: #333;
+}
+
+/* COMPONENT */
+.mv-component{
+  margin-bottom: 60px;
+}

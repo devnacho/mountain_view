@@ -1,0 +1,26 @@
+<div class="card <%= 'card--no-img' if properties[:image_url].nil? %>">
+  <%- if properties[:image_url] %>
+    <div class="card__image">
+      <a href="<%= properties[:link] %>"><img alt="<%= properties[:title] %>" src="<%= properties[:image_url] %>">
+      </a>
+    </div>
+  <% end %>
+  <div class="card__content">
+    <h3 class="card__content__title">
+      <a href="<%= properties[:link] %>"><%= properties[:title] %></a>
+    </h3>
+    <%- if properties[:description] %>
+      <p><%= properties[:description] %></p>
+    <%- end %>
+    <div class="card__content__data">
+      <%- if properties[:data] && properties[:data].any? %>
+        <%- properties[:data].each do |data| %>
+          <dl>
+            <dt><%= data[:number] %></dt>
+            <dd><%= data[:title] %></dd>
+          </dl>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

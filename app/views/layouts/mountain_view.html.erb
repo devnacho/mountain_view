@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styleguide</title>
+  <%= stylesheet_link_tag 'styleguide', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="mv-header">
+    <div class="mv-header__logo">STYLEGUIDE</div>
+  </div>
+  <div class="mv-flex-wrapper">
+    <div class="mv-sidebar">
+      <h3>COMPONENTS</h3>
+      <ul>
+        <%- mv_components.each do |component| %>
+          <!--TO DO: nasty anchor instead of link_to -->
+          <li><a href="/mountain_view/styleguide/<%= component %>"><%= component.capitalize %></a></li>
+        <% end %>
+
+      </ul>
+    </div>
+    <div class="mv-main">
+      <%= yield %>
+    </div>
+  </div>
+</body>
+</html>

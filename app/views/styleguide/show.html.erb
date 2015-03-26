@@ -1,0 +1,11 @@
+<div class="mv-main__header">
+  <h1><%= @component.capitalize %></h1>
+</div>
+
+<%- styleguide_stubs(@component).each do |component_properties| %>
+  <div class="mv-component">
+    <%= ui_component @component, component_properties %>
+  </div>
+<% end %>
+
+

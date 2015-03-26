@@ -1,4 +1,7 @@
 Dummy::Application.routes.draw do
+
+  mount MountainView::Engine => "/mountain_view"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

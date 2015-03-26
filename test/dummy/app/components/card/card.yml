@@ -1,0 +1,33 @@
+-
+  :title: "Aspen Snowmass"
+  :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
+  :link: "http://google.com"
+  :image_url: "http://i.imgur.com/QzuIJTo.jpg"
+  :data:
+  -
+    :title: "Elevation"
+    :number: '7879ft"'
+  -
+    :title: "Depth"
+    :number: '71"'
+
+
+-
+  :title: "Breckenridge, Colorado"
+  :link: "http://facebook.com"
+  :image_url: "http://i.imgur.com/w7ZyWPg.jpg"
+  :data:
+  -
+    :title: "Open lifts"
+    :number: '30'
+  -
+    :title: "Base"
+    :number: '51"'
+  -
+    :title: "Top"
+    :number: '99"'
+
+-
+  :title: "Sunset on the Mountain"
+  :description: "Three major ranges of the Alps – the Northern Calcareous Alps, Central Alps, and Southern Calcareous Alps – run west to east through Austria. The Central Alps, which consist largely of a granite base, are the largest and highest ranges in Austria."
+  :link: "http://google.com"

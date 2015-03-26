@@ -1,11 +1,26 @@
 .header {
-  font-family: sans-serif;
-  background: #F1F2F4;
-  width: 800px;
-  padding: 10px 100px;
-  color: #257699;
-  text-align: center;
-  font-weight: lighter;
+  margin-bottom: 30px;
+  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+  position: relative;
+}
+
+.header h1{
   font-size: 30px;
-  border: 1px solid #D0DFE5;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.header h3{
+  font-size: 20px;
+  font-family: 'Georgia';
+  color:#888;
+}
+
+.header::after{
+  content: " ";
+  width: 100px;
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  border-bottom: 5px solid #2C9140;
 }
