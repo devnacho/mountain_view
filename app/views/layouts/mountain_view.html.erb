@@ -15,9 +15,8 @@
       <h3>COMPONENTS</h3>
       <ul>
         <%- mv_components.each do |component| %>
-          <!-- TODO nasty anchor instead of link_to -->
           <li>
-            <a href="/mountain_view/styleguide/<%= component %>"><%= component.capitalize %></a>
+            <%= link_to component.capitalize, styleguide_path(id: component) %>
           </li>
         <% end %>
       </ul>
