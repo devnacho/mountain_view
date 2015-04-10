@@ -1,1 +1,3 @@
-console && console.log('header')
+if(typeof console !== "undefined") {
+  console.log("header")
+}

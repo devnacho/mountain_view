@@ -7,7 +7,8 @@ module MountainView
 
     initializer "mountain_view.assets" do |app|
       Rails.application.config.assets.paths << app.root.join("app", "components")
-      Rails.application.config.assets.precompile << "styleguide.css"
+      Rails.application.config.assets.precompile += %w( mountain_view/styleguide.css
+                                                        mountain_view/styleguide.js )
     end
 
     initializer "mountain_view.append_view_paths" do |app|
@@ -16,7 +17,7 @@ module MountainView
       end
     end
 
-    initializer "mountain_view.add_helpers" do |app|
+    initializer "mountain_view.add_helpers" do
       ActiveSupport.on_load :action_controller do
         helper MountainView::ComponentHelper
       end

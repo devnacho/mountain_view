@@ -1,1 +1,3 @@
-console && console.log('card')
+if(typeof console !== "undefined") {
+  console.log("card")
+}

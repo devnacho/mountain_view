@@ -19,7 +19,7 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     get "/assets/mountain_view.js"
 
     assert_response :success
-    assert_match(/console\.log\('header'\)/, response.body)
+    assert_match(/console\.log\("header"\)/, response.body)
     refute_match(/FileNotFound/, response.body)
   end
 

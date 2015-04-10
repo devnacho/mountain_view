@@ -1,6 +1,6 @@
 /*
 *= require mountain_view
-*= require prism
+*= require mountain_view/prism
 */
 
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
@@ -88,7 +88,7 @@ body{
 
 /* COMPONENT */
 .mv-component{
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 }
 
 .mv-component__item{
