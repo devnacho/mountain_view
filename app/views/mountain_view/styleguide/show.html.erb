@@ -10,7 +10,7 @@
     <div class="mv-component__description">
       <h2><%= @component.capitalize %> <%= index + 1 %></h2>
       <div class="mv-component__description__definition">
-        <code class="language-ruby">&lt;%= ui_component("<%= @component %>", properties: {as_below}) %&gt;</code>
+        <code class="language-ruby">&lt;%= ui_component("<%= @component %>", {properties as below}) %&gt;</code>
       </div>
       <%- formatted = JSON.pretty_generate component_properties  %>
       <pre class="mv-component__description__properties language-ruby"><code><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code></pre>
