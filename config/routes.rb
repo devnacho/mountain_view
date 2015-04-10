@@ -1,3 +1,5 @@
 MountainView::Engine.routes.draw do
-  resources :styleguide, only: [:show]
+  root to: "styleguide#index"
+
+  resources :styleguide, only: [:index, :show]
 end

@@ -1,3 +1,4 @@
+<% depend_on Rails.root.join('app', 'components') %>
 <% Dir.glob(Rails.root.join('app', 'components', '*')) do |component_dir|
   component = File.basename component_dir
   require_asset "#{component}/#{component}"

@@ -82,6 +82,9 @@ body{
   color: #333;
 }
 
+.mv-main__description {
+}
+
 /* COMPONENT */
 .mv-component{
   margin-bottom: 60px;

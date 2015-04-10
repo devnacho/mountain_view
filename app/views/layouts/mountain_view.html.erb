@@ -15,10 +15,11 @@
       <h3>COMPONENTS</h3>
       <ul>
         <%- mv_components.each do |component| %>
-          <!--TO DO: nasty anchor instead of link_to -->
-          <li><a href="/mountain_view/styleguide/<%= component %>"><%= component.capitalize %></a></li>
+          <!-- TODO nasty anchor instead of link_to -->
+          <li>
+            <a href="/mountain_view/styleguide/<%= component %>"><%= component.capitalize %></a>
+          </li>
         <% end %>
-
       </ul>
     </div>
     <div class="mv-main">

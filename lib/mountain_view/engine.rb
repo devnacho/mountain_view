@@ -3,9 +3,9 @@ require 'rails'
 
 module MountainView
   class Engine < ::Rails::Engine
-
     initializer "mountain_view.assets" do |app|
       Rails.application.config.assets.paths << app.root.join("app", "components")
+      Rails.application.config.assets.precompile << "styleguide.css"
     end
 
     initializer "mountain_view.append_view_paths" do |app|
