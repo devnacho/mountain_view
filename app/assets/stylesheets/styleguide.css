@@ -87,5 +87,30 @@ body{
 
 /* COMPONENT */
 .mv-component{
-  margin-bottom: 60px;
+  margin-bottom: 200px;
 }
+
+.mv-component__item{
+}
+
+.mv-component__description{
+  padding: 25px;
+  background: #F7F7F7;
+  border: 1px solid #E4E4E4;
+}
+
+.mv-component__description h2{
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.mv-component__description__definition{
+  margin-bottom:25px;
+}
+
+.mv-component__description__properties{
+  background: #fff;
+  border:1px solid #e4e4e4;
+  padding:15px;
+}
+

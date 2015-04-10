@@ -2,8 +2,20 @@
   <h1><%= @component.capitalize %></h1>
 </div>
 
-<%- styleguide_stubs(@component).each do |component_properties| %>
+<%- styleguide_stubs(@component).each_with_index do |component_properties, index| %>
   <div class="mv-component">
-    <%= ui_component @component, component_properties %>
+    <div class="mv-component__item">
+      <%= ui_component @component, component_properties %>
+    </div>
+    <div class="mv-component__description">
+      <h2><%= @component.capitalize %> <%= index + 1%></h2>
+      <div class="mv-component__description__definition">
+        = ui_component('<%= @component %>', properties: {as_below} )
+      </div>
+      <%- formatted = JSON.pretty_generate component_properties  %>
+      <pre class="mv-component__description__properties language-ruby"><code><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code></pre>
+
+      </pre>
+    </div>
   </div>
 <% end %>
