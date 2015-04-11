@@ -25,6 +25,7 @@ app/
       _header.html.erb
       header.css
       header.js
+      header.yml
 ```
 
 ### Component Example
@@ -54,6 +55,42 @@ You can require all the components CSS and JS automatically by requiring `mounta
 ```
 //= require mountain_view
 ```
+
+### Automatically generated Style Guide
+A style guide will be automatically generated. This styleguide never falls behind and it reflects your components in their latest version.
+
+#### Setting up the style guide
+1) Add the following line to your `routes.rb` file.
+```ruby
+mount MountainView::Engine => "/mountain_view"
+```
+2) Create stubs for your components. This stubs will be the examples in the styleguide.
+
+E.g: `/app/components/card/card.yml`
+```yml
+-
+  :title: "Aspen Snowmass"
+  :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
+  :link: "http://google.com"
+  :image_url: "http://i.imgur.com/QzuIJTo.jpg"
+  :data:
+  -
+    :title: "Elevation"
+    :number: '7879ft'
+  -
+    :title: "Depth"
+    :number: '71"'
+-
+  :title: "Sunset on the Mountain"
+  :description: "Three major ranges of the Alps – the Northern Calcareous Alps, Central Alps, and Southern Calcareous Alps – run west to east through Austria. The Central Alps, which consist largely of a granite base, are the largest and highest ranges in Austria."
+  :link: "http://google.com"
+
+```
+3) Vist `http://localhost:3000/mountain_view/styleguide`
+
+#### Example Style Guide
+![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
+
 
 ## Contributing
 
