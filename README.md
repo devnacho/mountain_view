@@ -16,7 +16,7 @@ Then execute:
 ## Usage
 
 ### Directory Structure
-Create components following this directory structure
+Create components following this directory structure:
 
 ```
 app/
@@ -27,6 +27,16 @@ app/
       header.js
       header.yml
 ```
+
+You can use the built-in generator, to automate the behavior:
+
+```
+rails generate mountain_view:component header
+```
+
+Keep in mind that you can also use `scss`, `coffeescript`, `haml`, or any other
+preprocessors that your app is currently using.
+
 
 ### Component Example
 You can write your own templates on erb, haml or any other templating language.
