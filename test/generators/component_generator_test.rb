@@ -14,4 +14,17 @@ class ComponentGeneratorTest < Rails::Generators::TestCase
     assert_file "app/components/widget/widget.js"
     assert_file "app/components/widget/widget.yml"
   end
+
+  test "Generates different engines" do
+    Rails.application.config.app_generators.template_engine :haml
+    Rails.application.config.app_generators.stylesheet_engine :scss
+    Rails.application.config.app_generators.javascript_engine :coffee
+
+    run_generator %w( widget )
+
+    assert_file "app/components/widget/_widget.html.haml"
+    assert_file "app/components/widget/widget.scss"
+    assert_file "app/components/widget/widget.coffee"
+    assert_file "app/components/widget/widget.yml"
+  end
 end
