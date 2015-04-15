@@ -23,6 +23,21 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     refute_match(/FileNotFound/, response.body)
   end
 
+  test "shows styleguide" do
+    get "/mountain_view"
+
+    assert_response :success
+    assert_match(/Select one of the components from the side to view its examples and documentation/, response.body)
+  end
+
+  test "shows specific component" do
+    get "/mountain_view/styleguide/header"
+
+    assert_response :success
+    assert_match(/Header/, response.body)
+    assert_match(/20 Mountains you didn.+t know they even existed/, response.body)
+  end
+
   private
 
   def clean_sprockets_cache
