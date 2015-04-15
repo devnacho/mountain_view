@@ -76,7 +76,7 @@ mount MountainView::Engine => "/mountain_view"
 ```
 2) Create stubs for your components. This stubs will be the examples in the styleguide.
 
-E.g: `/app/components/card/card.yml`
+E.g: `app/components/card/card.yml`
 ```yml
 -
   :title: "Aspen Snowmass"
