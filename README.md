@@ -60,21 +60,21 @@ helper:
 ```
 
 ### Assets
-You can require all the components CSS and JS automatically by requiring `mountain_view` in you main JS and CSS files.
+You can require all the components CSS and JS automatically by requiring `mountain_view` in your main JS and CSS files.
 
 ```
 //= require mountain_view
 ```
 
 ### Automatically generated Style Guide
-A style guide will be automatically generated. This styleguide never falls behind and it reflects your components in their latest version.
+A style guide will be automatically generated. This style guide never falls behind and it reflects your components in their latest version.
 
 #### Setting up the style guide
 1) Add the following line to your `routes.rb` file.
 ```ruby
 mount MountainView::Engine => "/mountain_view"
 ```
-2) Create stubs for your components. This stubs will be the examples in the styleguide.
+2) Create stubs for your components. These stubs will be the examples in the style guide.
 
 E.g: `app/components/card/card.yml`
 ```yml
@@ -116,4 +116,3 @@ E.g: `app/components/card/card.yml`
 
 * [Esteban Pastorino](https://github.com/kitop)
 * [Ignacio Gutierrez](https://github.com/jgnatch)
-
