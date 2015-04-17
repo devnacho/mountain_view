@@ -1,7 +1,7 @@
 # Mountain View
 
 Mountain View helps you create reusable visual components on your Rails
-Application.
+Application and automatically generates a style guide for your components.
 
 ## Installation
 
@@ -116,3 +116,6 @@ E.g: `app/components/card/card.yml`
 
 * [Esteban Pastorino](https://github.com/kitop)
 * [Ignacio Gutierrez](https://github.com/jgnatch)
+
+## Credits
+This library was inspired by [Rizzo](rizzo.lonelyplanet.com/styleguide/ui-components), a wonderful living style guide created by the guys at LonelyPlanet. [More info here](http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html)
