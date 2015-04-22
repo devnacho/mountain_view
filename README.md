@@ -4,6 +4,7 @@
 [![Code Climate](https://codeclimate.com/github/jgnatch/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/jgnatch/mountain_view)
 
 With Mountain View you create reusable components for your Rails frontend, while generating a living style guide.
+
 _FAQ_: Does it generate it automatically? You bet!
 
 ## Installation
