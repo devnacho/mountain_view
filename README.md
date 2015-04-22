@@ -108,9 +108,7 @@ E.g: `app/components/card/card.yml`
 
 ## Contributing
 
-See the [contributing guide][contributing].
-
-[contributing](CONTRIBUTING.md)
+See the [contributing guide](./CONTRIBUTING.md).
 
 ## Team
 
