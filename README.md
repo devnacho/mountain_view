@@ -103,8 +103,10 @@ E.g: `app/components/card/card.yml`
 3) Vist `http://localhost:3000/mountain_view/styleguide`
 
 #### Example Style Guide
-![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
 
+Visit the **[live demo!](https://mountain-view.herokuapp.com/mountain_view/styleguide)**
+
+![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
 
 ## Contributing
 
