@@ -56,21 +56,21 @@ body{
 }
 
 .mv-sidebar ul li a{
-  color:#555;
+  color: #555;
   font-size: 14px;
   text-decoration: none;
   font-weight: 300;
 }
 
 .mv-sidebar ul li a:hover{
-  color:#000;
+  color: #000;
 }
 
 /* MAIN */
 .mv-main{
   box-sizing: border-box;
   width: 82%;
-  float:left;
+  float: left;
   padding: 30px 60px;
 }
 .mv-main__header{
@@ -98,28 +98,29 @@ body{
   padding: 25px;
   background: #F7F7F7;
   border: 1px solid #E4E4E4;
-  margin-top:30px;
+  margin-top: 30px;
 }
 
 .mv-component__description h2{
-  font-weight:bold;
-  margin-bottom:20px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .mv-component__description__definition{
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
-.mv-component__description__definition code{
+.mv-component__description__definition code,
+.mv-component__description__properties code {
   background: none !important;
-  font-size:14px;
+  font-size: 14px;
 }
 
 .mv-component__description__properties{
   background: #fff !important;
-  border:1px solid #e4e4e4;
-  max-height:230px;
-  overflow:auto;
+  border: 1px solid #e4e4e4;
+  max-height: 230px;
+  overflow: auto;
   font-size: 13px;
   padding: 30px 20px;
 }

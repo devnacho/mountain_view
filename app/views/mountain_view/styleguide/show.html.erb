@@ -12,8 +12,10 @@
       <div class="mv-component__description__definition">
         <code class="language-ruby">&lt;%= ui_component("<%= @component %>", {properties as below}) %&gt;</code>
       </div>
-      <%- formatted = JSON.pretty_generate component_properties  %>
-      <pre class="mv-component__description__properties language-ruby"><code><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code></pre>
+      <%- formatted = JSON.pretty_generate component_properties %>
+      <div class="mv-component__description__properties">
+        <code class="language-ruby"><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code>
+      </div>
     </div>
   </div>
 <% end %>
