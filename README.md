@@ -60,7 +60,7 @@ You can then call your components on any view by using the following
 helper:
 
 ```erb
-<%= ui_component "header", title: "This is a title", subtitle: "And this is a subtitle" %>
+<%= render_component "header", title: "This is a title", subtitle: "And this is a subtitle" %>
 ```
 
 ### Assets

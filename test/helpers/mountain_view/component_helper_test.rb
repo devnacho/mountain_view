@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MountainView::ComponentHelperTest < ActionView::TestCase
   test "renders the proper component" do
-    rendered = ui_component("header", title: "Pepe")
+    rendered = render_component("header", title: "Pepe")
 
     expected = /Pepe/
 
