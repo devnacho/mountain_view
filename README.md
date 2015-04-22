@@ -3,9 +3,8 @@
 [![Build Status](https://travis-ci.org/jgnatch/mountain_view.svg?branch=master)](https://travis-ci.org/jgnatch/mountain_view)
 [![Code Climate](https://codeclimate.com/github/jgnatch/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/jgnatch/mountain_view)
 
-Mountain View helps you create reusable visual components on your Rails
-Application and automatically generates a style guide for your components.
-
+With Mountain View you create reusable components for your Rails frontend, while generating a living style guide.
+_FAQ_: Does it generate it automatically? You bet!
 
 ## Installation
 
