@@ -3,7 +3,7 @@ module MountainView
     layout "mountain_view"
 
     def show
-      @component = params[:id]
+      @component = MountainView::Component.new(params[:id])
     end
   end
 end

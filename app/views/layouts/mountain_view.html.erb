@@ -17,7 +17,7 @@
       <ul>
         <%- mv_components.each do |component| %>
           <li>
-            <%= link_to component.capitalize, styleguide_path(id: component) %>
+            <%= link_to component.title, styleguide_path(id: component.name) %>
           </li>
         <% end %>
       </ul>
