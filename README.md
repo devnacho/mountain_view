@@ -19,8 +19,13 @@ Then execute:
 
 ## Usage
 
-### Directory Structure
-Create components following this directory structure:
+Use the built-in generator to create a new component:
+
+```
+rails generate mountain_view:component header
+```
+
+This will create the following directory structure:
 
 ```
 app/
@@ -30,12 +35,6 @@ app/
       header.css
       header.js
       header.yml
-```
-
-You can use the built-in generator, to automate the behavior:
-
-```
-rails generate mountain_view:component header
 ```
 
 Keep in mind that you can also use `scss`, `coffeescript`, `haml`, or any other
