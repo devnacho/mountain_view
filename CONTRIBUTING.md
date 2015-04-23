@@ -2,11 +2,10 @@
 
 We love pull requests from everyone. Here's a quick guide:
 
-[Fork][fork], then clone the repo:
+[Fork](https://github.com/jgnatch/mountain_view/fork), then clone the repo:
 
     git clone git@github.com:your-username/mountain_view.git
 
-[fork](https://github.com/jgnatch/mountain_view/fork)
 
 Set up Ruby dependencies via Bundler
 
