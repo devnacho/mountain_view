@@ -1,6 +1,6 @@
 require "test_helper"
 
-class MountainViewComponentTest < MiniTest::Test
+class MountainViewComponentTest < ActiveSupport::TestCase
   def test_name
     component = MountainView::Component.new("header")
 
