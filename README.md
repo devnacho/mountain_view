@@ -105,6 +105,7 @@ E.g: `app/components/card/card.yml`
 #### Example Style Guide
 
 Visit the **[live demo!](https://mountain-view.herokuapp.com/mountain_view/styleguide)**
+([source repo](https://github.com/jgnatch/mountain_view_demo))
 
 ![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
 
