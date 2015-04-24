@@ -24,4 +24,10 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_instance_of Array, component.styleguide_stubs
     assert_equal expected_stub, component.styleguide_stubs.first
   end
+
+  def test_stubs_file
+    component = MountainView::Component.new("header")
+
+    assert_equal Rails.root.join("app/components/header/header.yml"), component.stubs_file
+  end
 end
