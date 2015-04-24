@@ -14,10 +14,9 @@ module MountainView
       YAML.load_file stubs_file
     end
 
-    private
-
     def stubs_file
       Rails.root.join("app/components/#{name}/#{name}.yml")
     end
+
   end
 end
