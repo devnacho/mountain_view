@@ -1,4 +1,5 @@
-# Mountain View
+![Mountain View](https://cloud.githubusercontent.com/assets/623766/7324123/e4f4a9fe-ea89-11e4-97cd-006314593252.png)
+
 
 [![Build Status](https://travis-ci.org/jgnatch/mountain_view.svg?branch=master)](https://travis-ci.org/jgnatch/mountain_view)
 [![Code Climate](https://codeclimate.com/github/jgnatch/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/jgnatch/mountain_view)
