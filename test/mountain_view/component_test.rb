@@ -28,6 +28,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
   def test_stubs_file
     component = MountainView::Component.new("header")
 
-    assert_equal Rails.root.join("app/components/header/header.yml"), component.stubs_file
+    expected_stubs_file = Rails.root.join("app/components/header/header.yml")
+    assert_equal expected_stubs_file, component.stubs_file
   end
 end
