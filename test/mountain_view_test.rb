@@ -38,6 +38,24 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     assert_match(/20 Mountains you didn.+t know they even existed/, response.body)
   end
 
+  test "shows a hint message if the component stub file is empty" do
+    get "/mountain_view/styleguide/breadcrumbs"
+
+    assert_response :success
+    assert_match(/Hint/, response.body)
+    assert_match(/You should write stub examples here:/, response.body)
+    assert_match(/app\/components\/breadcrumbs\/breadcrumbs.yml/, response.body)
+  end
+
+  test "shows a hint message if the component stub file is not found" do
+    get "/mountain_view/styleguide/something"
+
+    assert_response :success
+    assert_match(/Hint/, response.body)
+    assert_match(/You should write stub examples here:/, response.body)
+    assert_match(/app\/components\/something\/something.yml/, response.body)
+  end
+
   private
 
   def clean_sprockets_cache
