@@ -19,11 +19,7 @@ module MountainView
     end
 
     def stubs?
-      if styleguide_stubs.is_a?(Array)
-        styleguide_stubs.any?
-      else
-        false
-      end
+      styleguide_stubs.is_a?(Array) && styleguide_stubs.any?
     rescue Errno::ENOENT
       false
     end
