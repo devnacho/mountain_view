@@ -31,4 +31,14 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     expected_stubs_file = Rails.root.join("app/components/header/header.yml")
     assert_equal expected_stubs_file, component.stubs_file
   end
+
+  def test_stubs?
+    component_with_stubs = MountainView::Component.new("header")
+    component_without_stub_file = MountainView::Component.new("social_media_icons")
+    component_with_empty_stub_file = MountainView::Component.new("breadcrumbs")
+
+    assert_equal true, component_with_stubs.stubs?
+    assert_equal false, component_without_stub_file.stubs?
+    assert_equal false, component_with_empty_stub_file.stubs?
+  end
 end

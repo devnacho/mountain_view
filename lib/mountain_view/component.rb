@@ -17,5 +17,17 @@ module MountainView
     def stubs_file
       Rails.root.join("app/components/#{name}/#{name}.yml")
     end
+
+    def stubs?
+      begin
+        if styleguide_stubs.kind_of?(Array)
+          styleguide_stubs.any?
+        else
+          false
+        end
+      rescue Errno::ENOENT
+        false
+      end
+    end
   end
 end
