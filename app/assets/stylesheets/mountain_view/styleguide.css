@@ -125,3 +125,37 @@ body{
   padding: 30px 20px;
 }
 
+
+/* HINT */
+.mv-hint{
+  margin: 40px 0;
+  padding: 30px;
+  font-size: 14px;
+  border-top: 2px solid #FCCC37;
+  color: #777;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mv-hint h2{
+  font-size: 19px;
+  margin-bottom: 20px;
+  color: #000;
+}
+.mv-hint h2 span{
+  color: #FCCC37;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.mv-hint ul{
+  list-style-type: disc;
+  margin-left: 15px;
+}
+.mv-hint ul li{
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.mv-hint strong{
+  font-weight: bold;
+}
