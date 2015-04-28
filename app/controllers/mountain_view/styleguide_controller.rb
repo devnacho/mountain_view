@@ -5,5 +5,6 @@ module MountainView
     def show
       @component = MountainView::Component.new(params[:id])
     end
+
   end
 end

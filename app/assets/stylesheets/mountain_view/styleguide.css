@@ -156,6 +156,16 @@ body{
   line-height: 1.5;
 }
 
+.mv-hint pre{
+  background: #F5F5F5;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: 'Courier New', 'Courier';
+  font-weight: 600;
+  color: #444;
+}
+
 .mv-hint strong{
   font-weight: bold;
 }
