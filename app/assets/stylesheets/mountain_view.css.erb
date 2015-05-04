@@ -4,5 +4,7 @@
     component = File.basename component_dir
     require_asset "#{component}/#{component}"
   end %>
+<% else %>
+  <% depend_on Rails.root.join('app').to_s %>
 <% end %>
 

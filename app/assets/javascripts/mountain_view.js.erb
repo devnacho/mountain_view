@@ -1,7 +1,9 @@
 <% if Dir.exists?(Rails.root.join("app", "components") ) %>
   <% depend_on Rails.root.join('app', 'components').to_s %>
-  <% Dir.glob(Rails.root.join('app', 'components', '*')) do |component_dir|
+  <% Dir.glob(Rails.root.join('app', 'components', '*')).each do |component_dir|
     component = File.basename component_dir
     require_asset "#{component}/#{component}"
   end %>
+<% else %>
+  <% depend_on Rails.root.join('app').to_s %>
 <% end %>
