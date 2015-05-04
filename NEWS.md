@@ -3,6 +3,8 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.4.2 - 2015-05-04
+- [Improvement] Show a hint when there are no components  - #4 #12
 
 ## 0.4.2 - 2015-04-26
 - [Improvement] Show a hint when stub file is empty  - #5 #11
