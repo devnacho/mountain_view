@@ -8,6 +8,14 @@ With Mountain View you create reusable components for your Rails frontend, while
 
 _FAQ_: Does it generate it automatically? You bet!
 
+#### Example Style Guide
+
+Visit the **<a href="https://mountain-view.herokuapp.com/mountain_view/styleguide" target="_blank">living style guide demo!</a>**
+(<a href="https://github.com/jgnatch/mountain_view_demo" target="_blank">source repo</a>)
+
+<a href="https://mountain-view.herokuapp.com" target="_blank">Usage of components demo here!</a>
+
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -104,8 +112,10 @@ E.g: `app/components/card/card.yml`
 
 #### Example Style Guide
 
-Visit the **[live demo!](https://mountain-view.herokuapp.com/mountain_view/styleguide)**
-([source repo](https://github.com/jgnatch/mountain_view_demo))
+Visit the **<a href="https://mountain-view.herokuapp.com/mountain_view/styleguide" target="_blank">living style guide demo!</a>**
+(<a href="https://github.com/jgnatch/mountain_view_demo" target="_blank">source repo</a>)
+
+<a href="https://mountain-view.herokuapp.com" target="_blank">Usage of components demo here!</a>
 
 ![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
 
