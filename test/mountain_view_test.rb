@@ -12,7 +12,8 @@ class MountainViewTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_match(/\.header {/, response.body)
-    refute_match(/FileNotFound/, response.body)
+    refute_match(/Sprockets::FileNotFound/, response.body)
+    assert_match(/MountainView: stylesheet not found for component 'paragraph'/, response.body)
   end
 
   test "javascripts are properly served" do
@@ -20,7 +21,8 @@ class MountainViewTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_match(/console\.log\("header"\)/, response.body)
-    refute_match(/FileNotFound/, response.body)
+    refute_match(/Sprockets::FileNotFound/, response.body)
+    assert_match(/MountainView: javascript not found for component 'paragraph'/, response.body)
   end
 
   test "shows styleguide" do

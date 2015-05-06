@@ -2,7 +2,14 @@
   <% depend_on Rails.root.join('app', 'components').to_s %>
   <% Dir.glob(Rails.root.join('app', 'components', '*')).each do |component_dir|
     component = File.basename component_dir
-    require_asset "#{component}/#{component}"
+    begin
+      require_asset "#{component}/#{component}"
+    rescue Sprockets::FileNotFound
+      Rails.logger.debug("MountainView: javascript not found for component '#{component}'")
+  %>
+/* MountainView: javascript not found for component '<%= component %>' */
+  <%
+    end
   end %>
 <% else %>
   <% depend_on Rails.root.join('app').to_s %>
