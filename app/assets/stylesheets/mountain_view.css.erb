@@ -1,3 +1,6 @@
+<% MountainView.configuration.included_stylesheets.each do |included_stylesheet| %>
+  <%= require_asset included_stylesheet %>
+<% end %>
 <% if Dir.exists?(Rails.root.join("app", "components") ) %>
   <% depend_on Rails.root.join('app', 'components').to_s %>
   <% Dir.glob(Rails.root.join('app', 'components', '*')).each do |component_dir|
@@ -14,4 +17,3 @@
 <% else %>
   <% depend_on Rails.root.join('app').to_s %>
 <% end %>
-

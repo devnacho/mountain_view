@@ -1,12 +1,10 @@
 .header {
   margin-bottom: 30px;
-  font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
   position: relative;
 }
 
 .header h1{
   font-size: 30px;
-  color: #333;
   margin-bottom: 10px;
 }
 
