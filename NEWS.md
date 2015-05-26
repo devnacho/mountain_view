@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.5.1 - 2015-05-26
+- [Improvement] Call global stylesheets from initializer - #6
+
 ## 0.5.0 - 2015-05-06
 - Log missing component's assets files instead of raising an exception. - #13 #14
 
