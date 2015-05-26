@@ -74,6 +74,18 @@ helper:
 ### Assets
 You can require all the components CSS and JS automatically by requiring `mountain_view` in your main JS and CSS files.
 
+### Global Stylesheets
+In case you want to add global stylesheets (e.g. colors.scss, fonts.scss, etc.) to your Mountain View components you can do it by calling them with an initializer
+
+```ruby
+#config/initializers/mountain_view.rb
+
+MountainView.configure do |config|
+  config.included_stylesheets = ["colors", "fonts"]
+end
+
+```
+
 ```
 //= require mountain_view
 ```
