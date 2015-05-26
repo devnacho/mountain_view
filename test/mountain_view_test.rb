@@ -7,6 +7,13 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     assert_equal ::Rails::Engine, MountainView::Engine.superclass
   end
 
+  test "global stylesheets are properly served" do
+    get "/assets/mountain_view.css"
+
+    assert_response :success
+    assert_match(/Global Stylesheet Beginning/, response.body)
+  end
+
   test "stylesheets are properly served" do
     get "/assets/mountain_view.css"
 
