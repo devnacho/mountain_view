@@ -90,7 +90,7 @@ end
 //= require mountain_view
 ```
 
-### Automatically generated Style Guide
+## Automatically generated Style Guide
 A style guide will be automatically generated. This style guide never falls behind and it reflects your components in their latest version.
 
 #### Setting up the style guide
