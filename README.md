@@ -143,4 +143,4 @@ See the [contributing guide](./CONTRIBUTING.md).
 * [Ignacio Gutierrez](https://github.com/jgnatch)
 
 ## Credits
-This library was inspired by [Rizzo](rizzo.lonelyplanet.com/styleguide/ui-components), a wonderful living style guide created by the guys at LonelyPlanet. [More info here](http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html)
+This library was inspired by [Rizzo](http://rizzo.lonelyplanet.com/styleguide/ui-components/cards), a wonderful living style guide created by the guys at LonelyPlanet. [More info here](http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html)
