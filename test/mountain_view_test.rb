@@ -47,6 +47,13 @@ class MountainViewTest < ActionDispatch::IntegrationTest
     assert_match(/20 Mountains you didn.+t know they even existed/, response.body)
   end
 
+  test "shows specific component that uses a main app url okay" do
+    get "/mountain_view/styleguide/header"
+
+    assert_response :success
+    assert_match(/href=\"\/products\/2\"/, response.body)
+  end
+
   test "shows a hint message if the component stub file is empty" do
     get "/mountain_view/styleguide/breadcrumbs"
 

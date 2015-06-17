@@ -17,6 +17,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component = MountainView::Component.new("header")
 
     expected_stub = {
+      id: 1,
       title: "20 Mountains you didn't know they even existed",
       subtitle: "Buzzfeed title"
     }
