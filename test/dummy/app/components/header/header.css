@@ -8,6 +8,14 @@
   margin-bottom: 10px;
 }
 
+.header a{
+  text-decoration: none;
+}
+
+.header a:hover{
+  text-decoration: underline;
+}
+
 .header h3{
   font-size: 20px;
   font-family: 'Georgia';

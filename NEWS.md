@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.7.0 - 2015-06-17
+- [Improvement] Ability to use url helpers in components without prefix - #17 #18
+
 ## 0.6.0 - 2015-05-26
 - [Improvement] Call global stylesheets from initializer - #6 #15
 
