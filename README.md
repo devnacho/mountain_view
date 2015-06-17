@@ -71,13 +71,6 @@ helper:
 <%= render_component "header", title: "This is a title", subtitle: "And this is a subtitle" %>
 ```
 
-#### Note about URL helpers
-
-If you want to use URL helpers in your components (eg: `<%= link_to "Users", users_path %>`) you should prefix the helper with `main_app`, so the component knows the proper route when displayed on the stylesheet.
-With that, the example above would look like `<%= link_to "Users", main_app.users_path %>`.
-
-**Important**: This is a temporary work-around, and will be fixed in future versions of Mountain View.
-
 ### Assets
 You can require all the components CSS and JS automatically by requiring `mountain_view` in your main JS and CSS files.
 
