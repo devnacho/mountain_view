@@ -15,7 +15,7 @@ module MountainView
     end
 
     def stubs_file
-      Rails.root.join("app/components/#{name}/#{name}.yml")
+      MountainView.configuration.components_path.join(name, "#{name}.yml")
     end
 
     def stubs?
