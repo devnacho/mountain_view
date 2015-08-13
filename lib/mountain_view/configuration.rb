@@ -1,6 +1,7 @@
 module MountainView
   class Configuration
-    attr_accessor :included_stylesheets, :components_path
+    attr_accessor :included_stylesheets
+    attr_reader :components_path
 
     def initialize
       @included_stylesheets = []

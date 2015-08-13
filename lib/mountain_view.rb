@@ -11,4 +11,4 @@ module MountainView
   end
 end
 
-require 'mountain_view/engine' if defined?(Rails)
+require "mountain_view/engine" if defined?(Rails)
