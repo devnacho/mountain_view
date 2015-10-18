@@ -1,25 +1,46 @@
 <div class="mv-main__header">
   <h1><%= @component.title %></h1>
 </div>
-
-<% if @component.stubs? %>
-  <% @component.styleguide_stubs.each_with_index do |component_properties, index| %>
-    <div class="mv-component">
-      <div class="mv-component__item">
-        <%= render_component @component.name, component_properties %>
-      </div>
-      <div class="mv-component__description">
-        <h2><%= @component.title %> <%= index + 1 %></h2>
-        <div class="mv-component__description__definition">
-          <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
-        </div>
-        <%- formatted = JSON.pretty_generate component_properties %>
-        <div class="mv-component__description__properties">
-          <code class="language-ruby"><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code>
-        </div>
-      </div>
+<% if @component.stubs? && @component.stubs_correct_format? %>
+  <% if @component.stubs_extra_info? %>
+    <div class="mv-component__meta">
+      <p><%= @component.stubs_extra_info %></p>
     </div>
   <% end %>
+  <% if @component.component_stubs? %>
+    <% @component.component_stubs.each_with_index do |component_properties, index| %>
+        <div class="mv-component">
+          <div class="mv-component__item">
+            <%= render_component @component.name, component_properties %>
+          </div>
+          <div class="mv-component__description">
+            <h2><%= @component.title %> <%= index + 1 %></h2>
+            <div class="mv-component__description__definition">
+              <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
+            </div>
+            <%- formatted = JSON.pretty_generate component_properties %>
+            <div class="mv-component__description__properties">
+              <code class="language-ruby"><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  <% end %>
+<% elsif @component.stubs? && !@component.stubs_correct_format? %>
+  <div class="mv-hint">
+    <h2><span>Hint:</span>You have Stubs but they don't follow the correct format</h2>
+    <ul>
+      <li>
+        You should write stub examples like this:
+        <br>
+        <div class="mv-component__description__properties">
+          <code class="language-yaml">
+            <%= MountainView::Component.stub_example %>
+          </code>
+        </div>
+      </li>
+    </ul>
+  </div>
 <% else %>
   <div class="mv-hint">
     <h2><span>Hint:</span>To see your component make sure you've created stubs:</h2>
