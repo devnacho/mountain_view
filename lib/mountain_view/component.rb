@@ -19,11 +19,13 @@ module MountainView
     end
 
     def component_stubs
-      styleguide_stubs.first[:stubs]
+      styleguide_stubs.first[:stubs] if stubs?
     end
 
     def component_stubs?
       component_stubs.try(:any?) || false
+    rescue Errno::ENOENT
+      false
     end
 
     def stubs_file
@@ -37,15 +39,19 @@ module MountainView
     end
 
     def stubs_extra_info?
-      stubs_extra_info.try(:empty?) || false
+      !stubs_extra_info.empty?
+    rescue Errno::ENOENT
+      false
+    rescue NoMethodError
+      false
     end
 
     def stubs_extra_info
-      styleguide_stubs.first[:meta]
+      styleguide_stubs.first[:meta] if stubs?
     end
 
     def stubs_correct_format?
-      styleguide_stubs.first.key?(:stubs)
+      stubs? ? styleguide_stubs.first.key?(:stubs) : false
     end
   end
 end
