@@ -3,7 +3,7 @@ module MountainView
     attr_reader :name
 
     def self.stub_example
-      File.read(File.expand_path('../example.yml',__FILE__))
+      File.read(File.expand_path("../example.yml", __FILE__))
     end
 
     def initialize(name)

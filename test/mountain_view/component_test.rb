@@ -15,16 +15,19 @@ class MountainViewComponentTest < ActiveSupport::TestCase
 
   def test_styleguide_stubs
     component = MountainView::Component.new("header")
-
     expected_stub =
       {
-        :meta => "There is this different classes",
-        :stubs =>
+        meta: "There is this different classes",
+        stubs:
           [
-            { :id  =>  1, :title => "20 Mountains you didn't know they even existed",
-             :subtitle => "Buzzfeed title"
+            {
+              id:  1,
+              title: "20 Mountains you didn't know they even existed",
+              subtitle: "Buzzfeed title"
             },
-            { :id => 2, :title => "You won't believe what happened to this man at Aspen" }
+            { id: 2,
+              title: "You won't believe what happened to this man at Aspen"
+            }
           ]
       }
 
@@ -36,9 +39,15 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component = MountainView::Component.new("header")
     expected_stub =
       [
-        { :id => 1, :title => "20 Mountains you didn't know they even existed",
-         :subtitle => "Buzzfeed title" },
-        { :id => 2, :title => "You won't believe what happened to this man at Aspen" }
+        {
+          id: 1,
+          title: "20 Mountains you didn't know they even existed",
+          subtitle: "Buzzfeed title"
+        },
+        {
+          id: 2,
+          title: "You won't believe what happened to this man at Aspen"
+        }
       ]
 
     assert_instance_of Array, component.component_stubs
@@ -51,13 +60,13 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component_without_stub_file =
       MountainView::Component.new("social_media_icons")
     compoenet_with_stubs_but_incorrect_format =
-      MountainView::Component.new('card')
+      MountainView::Component.new("card")
 
     assert_equal true, component_with_stubs.component_stubs?
     assert_equal false, component_without_stub_file.component_stubs?
     assert_equal false, component_with_empty_stub_file.component_stubs?
     assert_equal false, compoenet_with_stubs_but_incorrect_format.
-                          component_stubs?
+      component_stubs?
   end
 
   def test_stubs_extra_info
@@ -69,7 +78,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     expected_extra_info_stub = "There is this different classes"
 
     assert_equal expected_extra_info_stub, component_with_extra_info.
-                                             stubs_extra_info
+      stubs_extra_info
     assert_equal nil, component_with_empty_stub_file.stubs_extra_info
     assert_equal nil, component_without_stub_file.stubs_extra_info
   end
@@ -87,7 +96,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_without_stub_file.stubs_extra_info?
     assert_equal false, component_with_empty_stub_file.stubs_extra_info?
     assert_equal false, compoenet_with_stubs_but_incorrect_format.
-                          stubs_extra_info?
+      stubs_extra_info?
   end
 
   def test_stubs_correct_format?
@@ -102,7 +111,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_without_stub_file.stubs_correct_format?
     assert_equal false, component_with_empty_stub_file.stubs_correct_format?
     assert_equal false, compoenet_with_stubs_but_incorrect_format.
-                          stubs_correct_format?
+      stubs_correct_format?
   end
 
   def test_stub_example
