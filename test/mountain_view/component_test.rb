@@ -31,8 +31,8 @@ class MountainViewComponentTest < ActiveSupport::TestCase
           ]
       }
 
-    assert_instance_of Array, component.styleguide_stubs
-    assert_equal expected_stub, component.styleguide_stubs.first
+    assert_instance_of Hash, component.styleguide_stubs
+    assert_equal expected_stub, component.styleguide_stubs
   end
 
   def test_component_stubs
@@ -74,7 +74,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component_with_empty_stub_file =
       MountainView::Component.new("breadcrumbs")
     component_without_stub_file =
-      MountainView::Component.new("social_media_icons")
+      MountainView::Component.new("paragraph")
     expected_extra_info_stub = "There is this different classes"
 
     assert_equal expected_extra_info_stub, component_with_extra_info.
@@ -104,31 +104,14 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component_with_empty_stub_file = MountainView::Component.new("breadcrumbs")
     component_without_stub_file =
       MountainView::Component.new("social_media_icons")
-    compoenet_with_stubs_but_incorrect_format =
+    component_with_stubs_but_incorrect_format =
       MountainView::Component.new("card")
 
     assert_equal true, component_with_correct_stubs.stubs_correct_format?
     assert_equal false, component_without_stub_file.stubs_correct_format?
     assert_equal false, component_with_empty_stub_file.stubs_correct_format?
-    assert_equal false, compoenet_with_stubs_but_incorrect_format.
+    assert_equal false, component_with_stubs_but_incorrect_format.
       stubs_correct_format?
-  end
-
-  def test_stub_example
-    expected_output = <<-EOF
-
-- :meta: 'information about the component' #optional
-  :stubs: #as many components as you need
-    -
-      :id: 1
-      :title: \"iyevuycveuyv\"
-      :subtitle: \"ebcecbeuc\"
-    -
-      :id: 2
-      :title: \"Yejvceuuvcue\"
-    EOF
-
-    assert_equal expected_output, MountainView::Component.stub_example
   end
 
   def test_stubs_file

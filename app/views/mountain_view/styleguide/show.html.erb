@@ -1,6 +1,7 @@
 <div class="mv-main__header">
   <h1><%= @component.title %></h1>
 </div>
+
 <% if @component.stubs? && @component.stubs_correct_format? %>
   <% if @component.stubs_extra_info? %>
     <div class="mv-component__meta">
@@ -35,7 +36,7 @@
         <br>
         <div class="mv-component__description__properties">
           <code class="language-yaml">
-            <%= MountainView::Component.stub_example %>
+            <%= render 'example', stubs: @component.styleguide_stubs %>
           </code>
         </div>
       </li>

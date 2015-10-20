@@ -1,9 +1,9 @@
-- :meta: 'There is this different classes'
-  :stubs:
-    -
-      :id: 1
-      :title: "20 Mountains you didn't know they even existed"
-      :subtitle: "Buzzfeed title"
-    -
-      :id: 2
-      :title: "You won't believe what happened to this man at Aspen"
+:meta: 'There is this different classes'
+:stubs:
+  -
+    :id: 1
+    :title: "20 Mountains you didn't know they even existed"
+    :subtitle: "Buzzfeed title"
+  -
+    :id: 2
+    :title: "You won't believe what happened to this man at Aspen"

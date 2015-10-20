@@ -6,5 +6,9 @@ module MountainView
         MountainView::Component.new File.basename(component_dir)
       end
     end
+
+    def render_example_stub(stubs)
+      stubs.to_yaml.gsub('---', '')
+    end
   end
 end
