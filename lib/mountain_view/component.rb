@@ -11,7 +11,7 @@ module MountainView
     end
 
     def styleguide_stubs
-      YAML.load_file stubs_file
+      YAML.load_file stubs_file || {}
     rescue Errno::ENOENT
       {}
     end
