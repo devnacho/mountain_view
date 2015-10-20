@@ -41,7 +41,7 @@ module MountainView
         if styleguide_stubs.key?(:meta)
           styleguide_stubs[:meta]
         else
-         {}
+          {}
         end
       else
         {}
