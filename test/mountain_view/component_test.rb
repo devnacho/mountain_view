@@ -79,8 +79,8 @@ class MountainViewComponentTest < ActiveSupport::TestCase
 
     assert_equal expected_extra_info_stub, component_with_extra_info.
       stubs_extra_info
-    assert_equal nil, component_with_empty_stub_file.stubs_extra_info
-    assert_equal nil, component_without_stub_file.stubs_extra_info
+    assert_equal true, component_with_empty_stub_file.stubs_extra_info.empty?
+    assert_equal true, component_without_stub_file.stubs_extra_info.empty?
   end
 
   def test_stubs_extra_info?

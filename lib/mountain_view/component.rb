@@ -11,17 +11,17 @@ module MountainView
     end
 
     def styleguide_stubs
-      YAML.load_file stubs_file || {}
+      YAML.load_file(stubs_file) || {}
     rescue Errno::ENOENT
       {}
     end
 
     def component_stubs
-      styleguide_stubs[:stubs] if stubs_correct_format?
+      stubs_correct_format? ? styleguide_stubs[:stubs] : {}
     end
 
     def component_stubs?
-      component_stubs.try(:any?) || false
+      component_stubs.any?
     end
 
     def stubs_file
@@ -29,21 +29,27 @@ module MountainView
     end
 
     def stubs?
-      styleguide_stubs.try(:any?) || false
+      styleguide_stubs.any?
     end
 
     def stubs_extra_info?
       !stubs_extra_info.empty?
-    rescue NoMethodError
-      false
     end
 
     def stubs_extra_info
-      styleguide_stubs[:meta] if styleguide_stubs.try(:key?, :meta)
+      if styleguide_stubs.is_a?(Hash)
+        if styleguide_stubs.key?(:meta)
+          styleguide_stubs[:meta]
+        else
+         {}
+        end
+      else
+        {}
+      end
     end
 
     def stubs_correct_format?
-      (stubs? && styleguide_stubs.try(:key?, :stubs)) || false
+      styleguide_stubs.is_a?(Hash) ? styleguide_stubs.key?(:stubs) : false
     end
   end
 end

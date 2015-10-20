@@ -8,7 +8,7 @@ module MountainView
     end
 
     def render_example_stub(stubs)
-      stubs.to_yaml.gsub('---', '')
+      stubs.to_yaml.gsub("---", "")
     end
   end
 end
