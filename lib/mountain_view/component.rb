@@ -49,7 +49,11 @@ module MountainView
     end
 
     def stubs_correct_format?
-      (styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)) || styleguide_stubs.is_a?(Array)
+      stubs_are_a_hash_with_info? || styleguide_stubs.is_a?(Array)
+    end
+
+    def stubs_are_a_hash_with_info?
+      styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)
     end
   end
 end
