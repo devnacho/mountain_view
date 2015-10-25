@@ -17,7 +17,11 @@ module MountainView
     end
 
     def component_stubs
-      stubs_correct_format? ? styleguide_stubs[:stubs] : {}
+      if styleguide_stubs.is_a?(Hash)
+        styleguide_stubs[:stubs] || {}
+      elsif styleguide_stubs.is_a?(Array)
+        styleguide_stubs
+      end
     end
 
     def component_stubs?
@@ -37,19 +41,15 @@ module MountainView
     end
 
     def stubs_extra_info
-      if styleguide_stubs.is_a?(Hash)
-        if styleguide_stubs.key?(:meta)
-          styleguide_stubs[:meta]
-        else
-          {}
-        end
+      if styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:meta)
+        styleguide_stubs[:meta]
       else
         {}
       end
     end
 
     def stubs_correct_format?
-      styleguide_stubs.is_a?(Hash) ? styleguide_stubs.key?(:stubs) : false
+      (styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)) || styleguide_stubs.is_a?(Array)
     end
   end
 end

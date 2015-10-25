@@ -49,7 +49,6 @@ class MountainViewComponentTest < ActiveSupport::TestCase
           title: "You won't believe what happened to this man at Aspen"
         }
       ]
-
     assert_instance_of Array, component.component_stubs
     assert_equal expected_stub, component.component_stubs
   end
@@ -61,11 +60,10 @@ class MountainViewComponentTest < ActiveSupport::TestCase
       MountainView::Component.new("social_media_icons")
     compoenet_with_stubs_but_incorrect_format =
       MountainView::Component.new("card")
-
     assert_equal true, component_with_stubs.component_stubs?
     assert_equal false, component_without_stub_file.component_stubs?
     assert_equal false, component_with_empty_stub_file.component_stubs?
-    assert_equal false, compoenet_with_stubs_but_incorrect_format.
+    assert_equal true, compoenet_with_stubs_but_incorrect_format.
       component_stubs?
   end
 
@@ -89,13 +87,13 @@ class MountainViewComponentTest < ActiveSupport::TestCase
       MountainView::Component.new("breadcrumbs")
     component_without_stub_file =
       MountainView::Component.new("social_media_icons")
-    compoenet_with_stubs_but_incorrect_format =
+    component_with_stubs_but_no_extra_info =
       MountainView::Component.new("card")
 
     assert_equal true, component_with_stubs.stubs_extra_info?
     assert_equal false, component_without_stub_file.stubs_extra_info?
     assert_equal false, component_with_empty_stub_file.stubs_extra_info?
-    assert_equal false, compoenet_with_stubs_but_incorrect_format.
+    assert_equal false, component_with_stubs_but_no_extra_info.
       stubs_extra_info?
   end
 
@@ -104,13 +102,13 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component_with_empty_stub_file = MountainView::Component.new("breadcrumbs")
     component_without_stub_file =
       MountainView::Component.new("social_media_icons")
-    component_with_stubs_but_incorrect_format =
+    component_with_stubs_but_old_syntax =
       MountainView::Component.new("card")
 
     assert_equal true, component_with_correct_stubs.stubs_correct_format?
     assert_equal false, component_without_stub_file.stubs_correct_format?
     assert_equal false, component_with_empty_stub_file.stubs_correct_format?
-    assert_equal false, component_with_stubs_but_incorrect_format.
+    assert_equal true, component_with_stubs_but_old_syntax.
       stubs_correct_format?
   end
 

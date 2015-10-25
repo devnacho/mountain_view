@@ -7,7 +7,6 @@ class ComponentGeneratorTest < Rails::Generators::TestCase
   setup :prepare_destination
 
   test "Assert all files are properly created" do
-    skip
     run_generator %w( widget )
 
     assert_file "app/components/widget/_widget.html.erb"
@@ -17,7 +16,6 @@ class ComponentGeneratorTest < Rails::Generators::TestCase
   end
 
   test "Generates different engines" do
-    skip
     Rails.application.config.app_generators.template_engine :haml
     Rails.application.config.app_generators.stylesheet_engine :scss
     Rails.application.config.app_generators.javascript_engine :coffee
