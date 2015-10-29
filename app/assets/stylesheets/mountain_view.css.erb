@@ -6,7 +6,7 @@
   <% Dir.glob(MountainView.configuration.components_path.join('*')).each do |component_dir|
     component = File.basename component_dir
     begin
-      require_asset "#{component}/#{component}"
+      require_asset "#{component}/#{component}.css"
     rescue Sprockets::FileNotFound
       Rails.logger.debug("MountainView: stylesheet not found for component '#{component}'")
   %>

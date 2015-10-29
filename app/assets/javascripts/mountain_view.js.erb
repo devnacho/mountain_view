@@ -3,7 +3,7 @@
   <% Dir.glob(MountainView.configuration.components_path.join('*')).each do |component_dir|
     component = File.basename component_dir
     begin
-      require_asset "#{component}/#{component}"
+      require_asset "#{component}/#{component}.js"
     rescue Sprockets::FileNotFound
       Rails.logger.debug("MountainView: javascript not found for component '#{component}'")
   %>
