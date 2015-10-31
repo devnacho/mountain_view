@@ -7,8 +7,17 @@ module MountainView
       end
     end
 
-    def render_example_stub(stubs)
-      stubs.to_yaml.gsub("---", "")
+    def example_stubs
+      <<-EOF.gsub(/^ {6}/, '')
+        # This are just an example
+        -
+          :id: 1
+          :title: "iyevuycveuyv"
+          :subtitle: "ebcecbeuc"
+        -
+          :id: 2
+          :title: "Yejvceuuvcue"
+      EOF
     end
   end
 end

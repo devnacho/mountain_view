@@ -36,7 +36,7 @@
           You should write stub examples like this:
           <br>
           <div class="mv-component__description__properties">
-            <code class="language-yaml"><%= render 'example', stubs: @component.styleguide_stubs %></code>
+            <code class="language-yaml"><%= render 'example', component_name: @component.name %></code>
           </div>
         </li>
       </ul>
@@ -50,6 +50,9 @@
         You should write stub examples here:
         <br>
         <strong><%= @component.stubs_file %></strong>
+        <div class="mv-component__description__properties">
+          <code class="language-yaml"><%= render 'example', component_name: @component.name %></code>
+        </div>
       </li>
     </ul>
   </div>
