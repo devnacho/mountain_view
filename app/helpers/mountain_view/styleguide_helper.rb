@@ -8,7 +8,8 @@ module MountainView
     end
 
     def example_stubs
-      <<-EOF.gsub(/^ {6}/, '')
+      <<-EOF.strip_heredoc
+      :stubs: #as many components as you need
         # This are just an example
         -
           :id: 1
