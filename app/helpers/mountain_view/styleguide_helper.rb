@@ -6,5 +6,19 @@ module MountainView
         MountainView::Component.new File.basename(component_dir)
       end
     end
+
+    def example_stubs
+      <<-EOF.strip_heredoc
+      :stubs: #as many components as you need
+        # This are just an example
+        -
+          :id: 1
+          :title: "iyevuycveuyv"
+          :subtitle: "ebcecbeuc"
+        -
+          :id: 2
+          :title: "Yejvceuuvcue"
+      EOF
+    end
   end
 end

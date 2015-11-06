@@ -95,6 +95,17 @@ body{
 .mv-component__item{
 }
 
+.mv-component__meta{
+  padding: 25px;
+  margin-bottom: 20px;
+  background: #F7F7F7;
+  border: 1px solid #E4E4E4;
+}
+
+.mv-component__meta p{
+  color: #000;
+}
+
 .mv-component__description{
   padding: 25px;
   background: #F7F7F7;
