@@ -13,11 +13,11 @@ module MountainView
         # This are just an example
         -
           :id: 1
-          :title: "iyevuycveuyv"
-          :subtitle: "ebcecbeuc"
+          :title: "Some title"
+          :subtitle: "Some subtitle"
         -
           :id: 2
-          :title: "Yejvceuuvcue"
+          :title: "Another subtitle"
       EOF
     end
   end
