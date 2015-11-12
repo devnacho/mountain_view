@@ -1,8 +1,10 @@
-require "rails/generators/base"
+# frozen_string_literal: true
+
+require_relative "./mountain_view_generator_base"
 
 module MountainView
   module Generators
-    class ComponentGenerator < Rails::Generators::Base
+    class ComponentGenerator < MountainViewGeneratorBase
       desc "Generates all files needed for a component"
 
       argument :component, required: true,
@@ -22,24 +24,6 @@ module MountainView
 
       def create_stubs_file
         create_file "app/components/#{component}/#{component}.yml"
-      end
-
-      private
-
-      def template_engine
-        app_generators[:template_engine] || "erb"
-      end
-
-      def stylesheet_engine
-        app_generators[:stylesheet_engine] || "css"
-      end
-
-      def javascript_engine
-        app_generators[:javascript_engine] || "js"
-      end
-
-      def app_generators
-        Rails.application.config.generators.rails
       end
     end
   end

@@ -13,6 +13,16 @@
   </div>
   <div class="mv-flex-wrapper">
     <div class="mv-sidebar">
+      <% if extra_pages.any? %>
+        <h3>EXTRA PAGES</h3>
+        <ul>
+          <%- extra_pages.each do |extra_page| %>
+            <li>
+              <%= link_to prettify_word(extra_page), extra_pages_path(extra_page) %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
       <h3>COMPONENTS</h3>
       <ul>
         <%- mv_components.each do |component| %>
