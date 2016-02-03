@@ -140,7 +140,7 @@ See the [contributing guide](./CONTRIBUTING.md).
 ### Current Maintainers
 
 * [Esteban Pastorino](https://github.com/kitop)
-* [Ignacio Gutierrez](https://github.com/jgnatch)
+* [Ignacio Gutierrez](https://github.com/devnacho)
 
 ## Credits
 This library was inspired by [Rizzo](http://rizzo.lonelyplanet.com/styleguide/ui-components/cards), a wonderful living style guide created by the guys at LonelyPlanet. [More info here](http://engineering.lonelyplanet.com/2014/05/18/a-maintainable-styleguide.html)
