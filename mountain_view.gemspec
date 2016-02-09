@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = MountainView::VERSION
   s.authors     = ["Ignacio Gutierrez", "Esteban Pastorino"]
   s.email       = ["nachojgutierrez@gmail.com", "ejpastorino@gmail.com"]
-  s.homepage    = "http://github.com/jgnatch/mountain_view"
+  s.homepage    = "http://github.com/devnacho/mountain_view"
   s.summary     = "Mountain View helps you create reusable visual components on your Rails Application."
   s.description = "Mountain View helps you create reusable visual components on your Rails Application."
   s.license     = "MIT"

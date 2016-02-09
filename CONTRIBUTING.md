@@ -2,7 +2,7 @@
 
 We love pull requests from everyone. Here's a quick guide:
 
-[Fork](https://github.com/jgnatch/mountain_view/fork), then clone the repo:
+[Fork](https://github.com/devnacho/mountain_view/fork), then clone the repo:
 
     git clone git@github.com:your-username/mountain_view.git
 
@@ -28,7 +28,7 @@ Push to your fork.
 [Submit a pull request][pr].
 
 [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
-[pr]: https://github.com/jgnatch/mountain_view/compare/
+[pr]: https://github.com/devnacho/mountain_view/compare/
 
 If [Hound] catches style violations, fix them.
 

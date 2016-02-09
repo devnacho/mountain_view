@@ -1,8 +1,8 @@
 ![Mountain View](https://cloud.githubusercontent.com/assets/623766/7324123/e4f4a9fe-ea89-11e4-97cd-006314593252.png)
 
 
-[![Build Status](https://travis-ci.org/jgnatch/mountain_view.svg?branch=master)](https://travis-ci.org/jgnatch/mountain_view)
-[![Code Climate](https://codeclimate.com/github/jgnatch/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/jgnatch/mountain_view)
+[![Build Status](https://travis-ci.org/devnacho/mountain_view.svg?branch=master)](https://travis-ci.org/devnacho/mountain_view)
+[![Code Climate](https://codeclimate.com/github/devnacho/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/devnacho/mountain_view)
 
 With Mountain View you create reusable components for your Rails frontend, while generating a living style guide.
 
@@ -11,7 +11,7 @@ _FAQ_: Does it generate it automatically? You bet!
 #### Example Style Guide
 
 Visit the **<a href="https://mountain-view.herokuapp.com/mountain_view/styleguide" target="_blank">living style guide demo!</a>**
-(<a href="https://github.com/jgnatch/mountain_view_demo" target="_blank">source repo</a>)
+(<a href="https://github.com/devnacho/mountain_view_demo" target="_blank">source repo</a>)
 
 <a href="https://mountain-view.herokuapp.com" target="_blank">Usage of components demo here!</a>
 
@@ -125,7 +125,7 @@ E.g: `app/components/card/card.yml`
 #### Example Style Guide
 
 Visit the **<a href="https://mountain-view.herokuapp.com/mountain_view/styleguide" target="_blank">living style guide demo!</a>**
-(<a href="https://github.com/jgnatch/mountain_view_demo" target="_blank">source repo</a>)
+(<a href="https://github.com/devnacho/mountain_view_demo" target="_blank">source repo</a>)
 
 <a href="https://mountain-view.herokuapp.com" target="_blank">Usage of components demo here!</a>
 
