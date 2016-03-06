@@ -3,6 +3,12 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.8.1 - 2016-03-16
+- [Fix] Clone component properties hash when displaying styleguide - Thanks @OddEssay - #31
+
+## 0.8.0 - 2016-01-22
+- [Feature] Ability to component metadata on styleguide - Thanks @GustavoCaso - #27
+
 ## 0.7.0 - 2015-06-17
 - [Improvement] Ability to use url helpers in components without prefix - #17 #18
 
