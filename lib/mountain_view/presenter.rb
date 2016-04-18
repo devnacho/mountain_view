@@ -47,11 +47,11 @@ module MountainView
       end
       alias_method :property, :properties
 
-      private 
+      private
 
       def define_property_methods(names = [])
         names.each do |name|
-          next if method_defined?(name) 
+          next if method_defined?(name)
           define_method name do
             properties[name.to_sym]
           end

@@ -16,7 +16,7 @@ class MountainView::PresenterTest < ActiveSupport::TestCase
   end
 
   test "exposes properties as provided" do
-    properties = {foo: "bar", hello: "world"}
+    properties = { foo: "bar", hello: "world" }
     presenter = MountainView::Presenter.new("header", properties)
     assert_equal properties, presenter.properties
   end
