@@ -9,3 +9,4 @@ test/dummy/.sass-cache
 Gemfile.lock
 test/tmp
 *.gem
+.ruby-version
