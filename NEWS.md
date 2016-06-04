@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.9.0 - 2016-06-04
+- [Feature] Introduce component presenter classes - Thanks @tombeynon - #39
+
 ## 0.8.1 - 2016-03-16
 - [Fix] Clone component properties hash when displaying styleguide - Thanks @OddEssay - #31
 
