@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/devnacho/mountain_view.svg?branch=master)](https://travis-ci.org/devnacho/mountain_view)
 [![Code Climate](https://codeclimate.com/github/devnacho/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/devnacho/mountain_view)
 
-With Mountain View you create reusable components for your Rails frontend, while generating a living style guide.
+With Mountain View you create reusable components for your Rails frontend, while generating a living style guide. _But what is a living style guide?_ A living style guide is a style guide that is always up-to-date and never falls behind.
 
 _FAQ_: Does it generate it automatically? You bet!
 
