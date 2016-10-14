@@ -111,13 +111,13 @@ helper:
 You can require all the components CSS and JS automatically by requiring `mountain_view` in your main JS and CSS files.
 
 ### Global Stylesheets
-In case you want to add global stylesheets (e.g. colors.scss, fonts.scss, etc.) to your Mountain View components you can do it by calling them with an initializer
+In case you want to add global stylesheets (e.g. reset, bootstrap, a grid system, etc) to your Mountain View components you can do it by calling them with an initializer
 
 ```ruby
 #config/initializers/mountain_view.rb
 
 MountainView.configure do |config|
-  config.included_stylesheets = ["colors", "fonts"]
+  config.included_stylesheets = ["reset", "bootstrap"]
 end
 
 ```
@@ -125,6 +125,14 @@ end
 ```
 //= require mountain_view
 ```
+
+You don't need to require those again in your application if you're requiring
+`mountain_view` already, that will cause duplicate CSS.
+
+For SASS mixins, variables, functions, etc (anything that doesn't generate
+code), you'd need to explicitly do and `@import` in each component stylesheet.
+As that doesn't generate extra CSS this won't cause any issues with the
+generated CSS, you're only giving that stylesheet access to those definitions.
 
 ## Automatically generated Style Guide
 A style guide will be automatically generated. This style guide never falls behind and it reflects your components in their latest version.
