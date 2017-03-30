@@ -175,6 +175,18 @@ Visit the **<a href="https://mountain-view.herokuapp.com/mountain_view/styleguid
 
 ![mountain_view](https://cloud.githubusercontent.com/assets/623766/7099771/5b06d8da-dfd4-11e4-8558-1b7f026f28ad.gif)
 
+### Custom Routes
+
+To override the path used within the mountain_view engine, set the `styleguide_path` option.
+
+```ruby
+#config/initializers/mountain_view.rb
+
+MountainView.configure do |config|
+  config.styleguide_path = "my-style-guide"
+end
+```
+
 ## Contributing
 
 See the [contributing guide](./CONTRIBUTING.md).
