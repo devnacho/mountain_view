@@ -11,7 +11,7 @@ class MountedEngineTest < ActionDispatch::IntegrationTest
 
   test "Custom path can be applied to styleguide resource" do
     styleguide_path = MountainView.configuration.styleguide_path
-    
+
     # Set the new path
     MountainView.configuration.styleguide_path = "style-guide"
     Rails.application.reload_routes!
