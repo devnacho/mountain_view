@@ -107,6 +107,32 @@ helper:
 <%= render_component "header", title: "This is a title", subtitle: "And this is a subtitle" %>
 ```
 
+### Yielding content
+
+You can also pass a block to a component, for example the following component
+
+```erb
+<!-- app/components/header/_header.html.erb -->
+<div class="header">
+  <%= yield %>
+</div>
+```
+
+```erb
+<%= render_component "header" do %>
+  <p>Hello World</p>
+<% end %>
+```
+
+Would output the following in your view:
+
+```erb
+<div class="header">
+  <p>Hello World</p>
+</div>
+```
+
+
 ### Assets
 You can require all the components CSS and JS automatically by requiring `mountain_view` in your main JS and CSS files.
 
