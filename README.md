@@ -109,15 +109,16 @@ helper:
 
 ### Yielding content
 
-You can also pass a block to a component, for example the following component
+You can also pass a block to a component, for example the following component:
 
 ```erb
 <!-- app/components/header/_header.html.erb -->
 <div class="header">
-  <%= yield %>
+  <%= block %>
 </div>
 ```
 
+Used in a view like so:
 ```erb
 <%= render_component "header" do %>
   <p>Hello World</p>

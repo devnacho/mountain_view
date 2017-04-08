@@ -13,7 +13,7 @@ module MountainView
     def render(context, &block)
       context.extend ViewContext
       context.inject_component_context self
-      context.render partial, path: partial, &block
+      context.render partial, partial: partial, block: block.call
     end
 
     def partial
