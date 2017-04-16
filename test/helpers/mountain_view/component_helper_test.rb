@@ -20,6 +20,16 @@ class MountainView::ComponentHelperTest < ActionView::TestCase
     assert_match /Tell me about the Proc/, rendered
   end
 
+  test "Does not override passed yield property with block" do
+    rendered = render_component("yielder", yield: "It is me in the block") do
+      "I appear to be in a block"
+    end
+
+    expected = /<div class=\"yield-here\">\n    It is me in the block\n  <\/div>/
+    assert_match expected, rendered
+    assert_match /Tell me about the Proc/, rendered
+  end
+
   test "renders when has a yield, but no block passed" do
     rendered = render_component("yielder")
 

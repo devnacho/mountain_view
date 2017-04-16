@@ -13,7 +13,8 @@ module MountainView
     def render(context, &block)
       context.extend ViewContext
       context.inject_component_context self
-      context.render partial, partial: partial, block: yield
+      properties[:yield] ||= yield
+      context.render partial, partial: partial
     end
 
     def partial

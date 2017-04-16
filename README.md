@@ -114,7 +114,7 @@ You can also pass a block to a component, for example the following component:
 ```erb
 <!-- app/components/header/_header.html.erb -->
 <div class="header">
-  <%= block %>
+  <%= properties[:yield] %>
 </div>
 ```
 
