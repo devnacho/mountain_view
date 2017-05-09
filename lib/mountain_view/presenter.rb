@@ -10,10 +10,11 @@ module MountainView
       @properties = default_properties.deep_merge(properties)
     end
 
-    def render(context)
+    def render(context, &block)
       context.extend ViewContext
       context.inject_component_context self
-      context.render partial: partial
+      properties[:yield] ||= yield
+      context.render partial, partial: partial
     end
 
     def partial
