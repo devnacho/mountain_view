@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.11.0 - 2017-05-09
+- [Feature] Allow components to receive blocks - Thanks @MikeRogers0 - #49
+
 ## 0.9.0 - 2016-06-04
 - [Feature] Introduce component presenter classes - Thanks @tombeynon - #39
 
