@@ -23,5 +23,9 @@ module MountainView
         super
       end
     end
+
+    def extra_pages
+      MountainView.configuration.extra_pages
+    end
   end
 end

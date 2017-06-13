@@ -8,5 +8,6 @@ test/dummy/tmp/
 test/dummy/.sass-cache
 Gemfile.lock
 test/tmp
+test/tmp2
 *.gem
 .ruby-version

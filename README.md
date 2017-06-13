@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/devnacho/mountain_view.svg?branch=master)](https://travis-ci.org/devnacho/mountain_view)
 [![Code Climate](https://codeclimate.com/github/devnacho/mountain_view/badges/gpa.svg)](https://codeclimate.com/github/devnacho/mountain_view)
 
-With Mountain View you create reusable components for your Rails frontend, while generating a living style guide. 
+With Mountain View you create reusable components for your Rails frontend, while generating a living style guide.
 
 **FAQ**
 
@@ -95,8 +95,8 @@ end
 
 Including a component class is optional, but it helps avoid polluting your
 views and helpers with presenter logic. Public methods in your component class
-will be made available to the view, along with any properties you define. 
-You can also access all properties using the `properties` method in your 
+will be made available to the view, along with any properties you define.
+You can also access all properties using the `properties` method in your
 component class and views. You can even define property defaults.
 
 ### Using components on your views
@@ -160,6 +160,25 @@ For SASS mixins, variables, functions, etc (anything that doesn't generate
 code), you'd need to explicitly do and `@import` in each component stylesheet.
 As that doesn't generate extra CSS this won't cause any issues with the
 generated CSS, you're only giving that stylesheet access to those definitions.
+=======
+
+
+### Adding extra pages to the styleguide
+In case you want to add additional pages to the styleguide (e.g grid, code_style) to your living style guide, you can do it by generating them in an initializer
+
+```ruby
+MountainView.configure do |config|
+  config.extra_pages = [:grid, :code_style]
+end
+```
+
+This will generate the routes and conventional links to the style guide.
+
+To add the views to handle the request.
+
+```
+rails generate mountain_view:extra_pages
+```
 
 ## Automatically generated Style Guide
 A style guide will be automatically generated. This style guide never falls behind and it reflects your components in their latest version.

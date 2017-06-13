@@ -16,3 +16,4 @@ end
 # for generators
 require "rails/generators/test_case"
 require "generators/mountain_view/component_generator"
+require "generators/mountain_view/extra_pages_generator"
