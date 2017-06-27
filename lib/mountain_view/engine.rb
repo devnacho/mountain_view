@@ -31,8 +31,8 @@ module MountainView
 
     initializer "mountain_view.add_helpers" do
       ActiveSupport.on_load :action_controller do
-        helper MountainView::ApplicationHelper
-        helper MountainView::ComponentHelper
+        ::ActionController::Base.helper MountainView::ApplicationHelper
+        ::ActionController::Base.helper MountainView::ComponentHelper
       end
     end
   end
