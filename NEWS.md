@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.12.1 - 2017-07-01
+- [Fix] Fix issue with generator - Thanks @robcole - #53
+
 ## 0.12.0 - 2017-06-13
 - [Feature] Add option to add extra pages to the styleguide - Thanks @GustavoCaso - #29
 
