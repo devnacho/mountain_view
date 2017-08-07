@@ -161,7 +161,6 @@ For SASS mixins, variables, functions, etc (anything that doesn't generate
 code), you'd need to explicitly do and `@import` in each component stylesheet.
 As that doesn't generate extra CSS this won't cause any issues with the
 generated CSS, you're only giving that stylesheet access to those definitions.
-=======
 
 
 ### Adding extra pages to the styleguide
