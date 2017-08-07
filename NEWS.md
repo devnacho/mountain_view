@@ -3,6 +3,9 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.12.2 - 2017-08-07
+- [Improvement] Move all styleguide-related helpers to StyleguideHelper
+
 ## 0.12.1 - 2017-07-01
 - [Fix] Fix issue with generator - Thanks @robcole - #53
 
