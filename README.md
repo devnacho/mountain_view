@@ -31,7 +31,8 @@ Then execute:
 
     $ bundle
 
-Mountain View supports Ruby 2.0+.
+Mountain View supports Ruby 2.2+ and Rails 4.2+ (although it may work in older
+versions)
 
 ## Usage
 
