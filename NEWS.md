@@ -3,6 +3,11 @@
 User-visible changes worth mentioning.
 
 ---
+## 0.12.3 - 2017-08-17
+- [Fix] Add missing helper to extra pages controller
+- [Improvement] Default to alphabetically sort components in styleguide sidebar - Thanks @Spone - #60
+- [Improvement] Use `link_to_unless_current` to indicate the current selected page in sidebar
+
 ## 0.12.2 - 2017-08-07
 - [Improvement] Move all styleguide-related helpers to StyleguideHelper
 
