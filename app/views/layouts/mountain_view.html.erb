@@ -18,7 +18,7 @@
         <ul>
           <%- extra_pages.each do |extra_page| %>
             <li>
-              <%= link_to prettify_word(extra_page), extra_pages_path(extra_page) %>
+              <%= link_to_unless_current prettify_word(extra_page), extra_pages_path(extra_page) %>
             </li>
           <% end %>
         </ul>
@@ -27,7 +27,7 @@
       <ul>
         <%- mv_components.each do |component| %>
           <li>
-            <%= link_to component.title, styleguide_path(id: component.name) %>
+            <%= link_to_unless_current component.title, styleguide_path(id: component.name) %>
           </li>
         <% end %>
       </ul>

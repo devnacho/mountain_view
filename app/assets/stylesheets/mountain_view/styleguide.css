@@ -54,11 +54,11 @@ body{
 
 .mv-sidebar ul li{
   margin-bottom: 20px;
+  font-size: 14px;
 }
 
 .mv-sidebar ul li a{
   color: #555;
-  font-size: 14px;
   text-decoration: none;
   font-weight: 300;
 }
