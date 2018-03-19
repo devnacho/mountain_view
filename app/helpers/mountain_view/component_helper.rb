@@ -6,5 +6,6 @@ module MountainView
         capture(&block) if block_given?
       end
     end
+    alias :rc :render_component
   end
 end
