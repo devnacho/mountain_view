@@ -2,7 +2,10 @@
 
 User-visible changes worth mentioning.
 
----
+--
+## 0.13.0 - 2018-03-19
+- [Feature] Add `rc` as an alias to `render_component` - Thanks @diegotoral - #66
+
 ## 0.12.3 - 2017-08-17
 - [Fix] Add missing helper to extra pages controller
 - [Improvement] Default to alphabetically sort components in styleguide sidebar - Thanks @Spone - #60
