@@ -235,10 +235,9 @@ end
 ```
 
 ## Improving performance
+Rendering a large amount of partials in your view can lead to a performance bottleneck, usually caused by time taken to parse and convert the Erb into HTML.
 
-Rendering a large amount of partials in your view can lead to a performance bottleneck, caused by the time taken to read the partials from disk.
-
-Via a Mountain View component you can render your HTML without touching the file system, which is super performant! To do this, you'll need to override `render(context, &block)` method, as inherited from `MountainView::Presenter` class.
+Via a Mountain View component you can render your HTML without having to use a template parsing engine, which is super performant! To do this, you'll need to override `render(context, &block)` method, as inherited from `MountainView::Presenter` class.
 
 For example, if you had a component called `blank_state` with the ERB of: 
 
