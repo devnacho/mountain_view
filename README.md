@@ -234,6 +234,38 @@ MountainView.configure do |config|
 end
 ```
 
+## Improving performance
+Rendering a large amount of partials in a request can lead to a performance bottleneck, usually this is caused by the parsing and rendering of template code such as ERB or HAML.
+
+Via a Mountain View component you can render your HTML without touching a template parsing engine, which is super performant! To do this, you'll need to override `render(context, &block)` method, which is inherited from `MountainView::Presenter` class.
+
+For example, if you had a component called `blank_state` with the Erb of: 
+
+```html
+<!-- app/components/blank_state/_blank_state.html.erb -->
+<div class="blank-state <%= properties[:class] %>"></div>
+```
+
+You'd override the `render` method in `blank_state_component.rb` like so: 
+
+```ruby
+# app/components/blank_state/blank_state_component.rb
+class BlankStateComponent < MountainView::Presenter
+  properties :class
+
+  # Override the inherited render method to not read partials from the file system.
+  def render(context, &block)
+    # context is the view we've being rendered from, so it has all Rails helpers
+    context.content_tag(:div, '', class: [
+      'blank-state',
+      properties[:class]
+    ].compact.join(' '))
+  end
+end
+```
+
+Anecdotally, a request which had to render 50 partials and took a whopping 2000ms was reduced to 200ms using this technique.
+
 ## Contributing
 
 See the [contributing guide](./CONTRIBUTING.md).
