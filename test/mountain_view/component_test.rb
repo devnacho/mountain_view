@@ -128,4 +128,17 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_without_stub_file.stubs?
     assert_equal false, component_with_empty_stub_file.stubs?
   end
+
+  def test_example_title
+    component = component_with_stubs = MountainView::Component.new("meta_header")
+    component.component_stubs.each_with_index do | component_properties, index |
+      if index.eql?(0)
+        assert_equal "Specific Example", component.example_title(component_properties, index)
+      else
+        built_title = component.title + " " + (index + 1).to_s
+        assert_equal built_title, component.example_title(component_properties, index)
+      end
+    end
+  end
+
 end
