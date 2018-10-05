@@ -16,7 +16,7 @@
               <%= render_component @component.name, component_properties.clone %>
             </div>
             <div class="mv-component__description">
-              <h2><%= @component.example_title(component_properties, i) %></h2>
+              <h2><%= @component.example_title(component_properties, index) %></h2>
               <div class="mv-component__description__definition">
                 <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
               </div>
