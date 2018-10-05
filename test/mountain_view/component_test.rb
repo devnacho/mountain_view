@@ -139,5 +139,15 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     end
   end
 
+  def test_example_classes
+    component = MountainView::Component.new("meta_header")
+    component.component_stubs.each_with_index do | component_properties, index |
+      if index.eql?(0)
+        assert_equal "mv--black-background", component.example_classes(component_properties)
+      else
+        assert_nil component.example_classes(component_properties)
+      end
+    end
+  end
 
 end
