@@ -12,7 +12,12 @@
     <% if @component.component_stubs? %>
       <% @component.component_stubs.each_with_index do |component_properties, index| %>
           <div class="mv-component">
-            <div class="mv-component__item">
+            <% if @component.example_classes(component_properties).blank? %>
+              <% component_item_classes = 'mv-component__item' %>
+            <% else %>
+              <% component_item_classes = "mv-component__item #{@component.example_classes(component_properties)} " %>
+            <% end %>
+            <div class="<%= component_item_classes %>">
               <%= render_component @component.name, component_properties.clone %>
             </div>
             <div class="mv-component__description">
