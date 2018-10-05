@@ -72,5 +72,11 @@ module MountainView
       end
     end
 
+    def example_description component_properties
+      if component_properties.key?(:mv_description)
+        component_properties[:mv_description]
+      end
+    end
+
   end
 end
