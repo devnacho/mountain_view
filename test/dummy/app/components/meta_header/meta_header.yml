@@ -4,6 +4,7 @@
   -
     :mv_title: "Specific Example"
     :mv_description: "This describes the use of this specific settings for the component"
+    :mv_class: "mv-black-background"
     :id: 1
     :title: "20 Mountains you didn't know they even existed"
     :subtitle: "Buzzfeed title"
