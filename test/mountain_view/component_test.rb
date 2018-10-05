@@ -130,7 +130,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
   end
 
   def test_example_title
-    component = component_with_stubs = MountainView::Component.new("meta_header")
+    component = MountainView::Component.new("meta_header")
     component.component_stubs.each_with_index do | component_properties, index |
       if index.eql?(0)
         assert_equal "Specific Example", component.example_title(component_properties, index)
@@ -140,5 +140,17 @@ class MountainViewComponentTest < ActiveSupport::TestCase
       end
     end
   end
+
+  def test_example_description
+    component = MountainView::Component.new("meta_header")
+    component.component_stubs.each_with_index do | component_properties, index |
+      if index.eql?(0)
+        assert_equal "This describes the use of this specific settings for the component", component.example_description(component_properties)
+      else
+        assert_nil component.example_description(component_properties)
+      end
+    end
+  end
+
 
 end

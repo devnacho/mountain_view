@@ -17,6 +17,9 @@
             </div>
             <div class="mv-component__description">
               <h2><%= @component.example_title(component_properties, index) %></h2>
+              <% unless @component.example_description(component_properties).blank? %>
+                <p><% @component.example_description(component_properties) %></p>
+              <% end %>
               <div class="mv-component__description__definition">
                 <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
               </div>
