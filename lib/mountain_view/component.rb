@@ -64,7 +64,7 @@ module MountainView
       styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)
     end
 
-    def example_title component_properties, index
+    def example_title(component_properties, index)
       if component_properties.key?(:mv_title)
         component_properties[:mv_title]
       else
@@ -72,17 +72,16 @@ module MountainView
       end
     end
 
-    def example_description component_properties
+    def example_description(component_properties)
       if component_properties.key?(:mv_description)
         component_properties[:mv_description]
       end
     end
 
-    def example_classes component_properties
+    def example_classes(component_properties)
       if component_properties.key?(:mv_classes)
         component_properties[:mv_classes]
       end
     end
-
   end
 end
