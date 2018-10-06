@@ -83,5 +83,9 @@ module MountainView
         component_properties[:mv_classes]
       end
     end
+
+    def remove_example_meta_properties(component_properties)
+      component_properties.except(:mv_title, :mv_description, :mv_classes)
+    end
   end
 end
