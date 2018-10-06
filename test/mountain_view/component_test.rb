@@ -154,11 +154,12 @@ class MountainViewComponentTest < ActiveSupport::TestCase
       end
     end
   end
+
   def test_remove_example_meta_properties
     component = MountainView::Component.new("meta_header")
     component.component_stubs.each do |component_properties|
       test_properties =
-          component.remove_example_meta_properties component_properties
+        component.remove_example_meta_properties component_properties
       refute test_properties[:mv_title]
       refute test_properties[:mv_description]
       refute test_properties[:mv_classes]
