@@ -134,7 +134,8 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     component = MountainView::Component.new("meta_header")
     component.component_stubs.each_with_index do |component_properties, index|
       if index.eql?(0)
-        assert_equal "This describes the use of this specific settings for the component",
+        assert_equal "This describes the use of this specific settings for"\
+                         "the component",
                      component.example_description(component_properties)
       else
         assert_nil component.example_description(component_properties)
