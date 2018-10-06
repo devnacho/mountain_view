@@ -264,7 +264,6 @@ E.g: `app/components/card/card.yml`
         :title: "Depth"
         :number: '71"'
 
-
 ```
 
 
