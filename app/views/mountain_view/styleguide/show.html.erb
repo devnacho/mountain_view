@@ -29,7 +29,7 @@
               <div class="mv-component__description__definition">
                 <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
               </div>
-              <%- formatted = JSON.pretty_generate component_properties %>
+              <%- formatted = JSON.pretty_generate @component.remove_example_meta_properties(component_properties) %>
               <div class="mv-component__description__properties">
                 <code class="language-ruby"><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code>
               </div>
