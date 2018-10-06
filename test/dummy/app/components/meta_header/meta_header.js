@@ -1,3 +1,3 @@
 if(typeof console !== "undefined") {
-  console.log("header")
+  console.log("header");
 }
