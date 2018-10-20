@@ -7,10 +7,10 @@ en:
     show:
       hint_stub_format_html: <span>Hint:</span>You have Stubs but they don't follow the correct format.
       tip_stub_format_html: You should write stub examples like this
-      hint_stub_creation_html: <span>Hint:</span>To see your component make sure you've created stubs:
+      hint_stub_creation_html: <span>Hint:</span>To see your component make sure you've created stubs
       tip_stub_creation_html: You should write stub examples here
     index:
       description: Select one of the components from the side to view its examples and documentation.
       hint_component_html: <span>Hint:</span>You haven't created any components yet
-      tip_first_component_html: You can generate your first component by running:
-      tip_second_component_html: Or manually create the following files:
+      tip_first_component_html: You can generate your first component by running
+      tip_second_component_html: Or manually create the following files
