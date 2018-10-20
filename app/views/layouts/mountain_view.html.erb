@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Styleguide</title>
+  <title><% t :mountain_view.main.styleguide_title  %></title>
   <%= stylesheet_link_tag 'mountain_view/styleguide', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'mountain_view/styleguide', 'data-turbolinks-track' => true %>
 
@@ -9,12 +9,12 @@
 </head>
 <body>
   <div class="mv-header">
-    <div class="mv-header__logo">STYLEGUIDE</div>
+    <div class="mv-header__logo"><% t :mountain_view.main.styleguide_title %></div>
   </div>
   <div class="mv-flex-wrapper">
     <div class="mv-sidebar">
       <% if extra_pages.any? %>
-        <h3>EXTRA PAGES</h3>
+        <h3><% t :mountain_view.main.extra_pages %></h3>
         <ul>
           <%- extra_pages.each do |extra_page| %>
             <li>
@@ -23,7 +23,7 @@
           <% end %>
         </ul>
       <% end %>
-      <h3>COMPONENTS</h3>
+      <h3><% t :mountain_view.main.components %></h3>
       <ul>
         <%- mv_components.each do |component| %>
           <li>
