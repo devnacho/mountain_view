@@ -30,10 +30,10 @@
     <% end %>
   <% else %>
     <div class="mv-hint">
-      <h2><% t('mountain_view.show.hint_stub_format_html') %></h2>
+      <h2><%= t('mountain_view.show.hint_stub_format_html') %></h2>
       <ul>
         <li>
-          <% t('mountain_view.show.tip_stub_format_html') %>:
+          <%= t('mountain_view.show.tip_stub_format_html') %>:
           <br>
           <div class="mv-component__description__properties">
             <code class="language-yaml"><%= render 'example', component_name: @component.name %></code>
@@ -44,10 +44,10 @@
   <% end %>
 <% else %>
   <div class="mv-hint">
-    <h2><% t('mountain_view.show.hint_stub_creation_html') %></h2>
+    <h2><%= t('mountain_view.show.hint_stub_creation_html') %></h2>
     <ul>
       <li>
-        <% t('mountain_view.show.tip_stub_creation_html') %>:
+        <%= t('mountain_view.show.tip_stub_creation_html') %>:
         <br>
         <strong><%= @component.stubs_file %></strong>
         <div class="mv-component__description__properties">

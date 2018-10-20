@@ -1,22 +1,22 @@
 <div class="mv-main__header">
-  <h1><% t('.mountain_view.main.styleguide_title') %></h1>
+  <h1><%= t('.mountain_view.main.styleguide_title') %></h1>
 </div>
 
 <% if mv_components.any? %>
   <div class="mv-main__description">
-    <% t('mountain_view.index.description') %>
+    <%= t('mountain_view.index.description') %>
   </div>
 <% else %>
   <div class="mv-hint">
-    <h2><% t('mountain_view.index.hint_component_html') %></h2>
+    <h2><%= t('mountain_view.index.hint_component_html') %></h2>
     <ul>
       <li>
-        <% t('mountain_view.index.tip_first_component_html') %>:
+        <%= t('mountain_view.index.tip_first_component_html') %>:
         <br>
         <pre>rails generate mountain_view:component component-name</pre>
       </li>
       <li>
-        <% t('mountain_view.index.tip_second_component_html') %>:
+        <%= t('mountain_view.index.tip_second_component_html') %>:
         <br>
         <pre>
 app/
