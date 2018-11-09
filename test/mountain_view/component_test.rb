@@ -104,7 +104,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_with_empty_stub_file.stubs?
   end
 
-  #TODO: Remove these tests
+  #TODO: Move these tests
   # def test_example_title
   #   component = MountainView::Component.new("meta_header")
   #   component.component_stubs.each_with_index do |component_properties, index|
