@@ -23,7 +23,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal expected_stub, component.styleguide_stubs
   end
 
-  def test_component_stubs
+ def test_component_stubs
     component = MountainView::Component.new('header')
     expected_stub = header_stub_only
     assert_instance_of Array, component.component_stubs
@@ -116,53 +116,85 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_with_empty_stub_file.stubs?
   end
 
-  def test_example_title
-    component = MountainView::Component.new("meta_header")
-    component.component_stubs.each_with_index do |component_properties, index|
-      if index.eql?(0)
-        assert_equal "Specific Example",
-                     component.example_title(component_properties, index)
-      else
-        built_title = component.title + " " + (index + 1).to_s
-        assert_equal built_title,
-                     component.example_title(component_properties, index)
-      end
-    end
+  #TODO: Remove these tests
+  # def test_example_title
+  #   component = MountainView::Component.new("meta_header")
+  #   component.component_stubs.each_with_index do |component_properties, index|
+  #     if index.eql?(0)
+  #       assert_equal "Specific Example",
+  #                    component.example_title(component_properties, index)
+  #     else
+  #       built_title = component.title + " " + (index + 1).to_s
+  #       assert_equal built_title,
+  #                    component.example_title(component_properties, index)
+  #     end
+  #   end
+  # end
+  #
+  # def test_example_description
+  #   component = MountainView::Component.new("meta_header")
+  #   component.component_stubs.each_with_index do |component_properties, index|
+  #     if index.eql?(0)
+  #       assert_equal "This describes the use of this specific settings for "\
+  #                        "the component",
+  #                    component.example_description(component_properties)
+  #     else
+  #       assert_nil component.example_description(component_properties)
+  #     end
+  #   end
+  # end
+  #
+  # def test_example_classes
+  #   component = MountainView::Component.new("meta_header")
+  #   component.component_stubs.each_with_index do |component_properties, index|
+  #     if index.eql?(0)
+  #       assert_equal "mv--black-background",
+  #                    component.example_classes(component_properties)
+  #     else
+  #       assert_nil component.example_classes(component_properties)
+  #     end
+  #   end
+  # end
+  #
+  # def test_remove_example_meta_properties
+  #   component = MountainView::Component.new("meta_header")
+  #   component.component_stubs.each do |component_properties|
+  #     test_properties =
+  #       component.remove_example_meta_properties component_properties
+  #     refute test_properties[:mv_title]
+  #     refute test_properties[:mv_description]
+  #     refute test_properties[:mv_classes]
+  #   end
+  # end
+
+  private
+
+  def header_stub_meta
+    {
+        meta: "There is this different classes",
+        stubs:
+            [
+                {
+                    id:  1,
+                    title: "20 Mountains you didn't know they even existed",
+                    subtitle: "Buzzfeed title"
+                },
+                {
+                    id: 2,
+                    title: "You won't believe what happened to this man at Aspen"
+                }
+            ]
+    }
   end
 
-  def test_example_description
-    component = MountainView::Component.new("meta_header")
-    component.component_stubs.each_with_index do |component_properties, index|
-      if index.eql?(0)
-        assert_equal "This describes the use of this specific settings for "\
-                         "the component",
-                     component.example_description(component_properties)
-      else
-        assert_nil component.example_description(component_properties)
-      end
-    end
+  def header_stub_only
+    header_stub_meta[:stubs]
   end
 
-  def test_example_classes
-    component = MountainView::Component.new("meta_header")
-    component.component_stubs.each_with_index do |component_properties, index|
-      if index.eql?(0)
-        assert_equal "mv--black-background",
-                     component.example_classes(component_properties)
-      else
-        assert_nil component.example_classes(component_properties)
-      end
-    end
+  def header_stub_first
+    header_stub_only.first()
   end
 
-  def test_remove_example_meta_properties
-    component = MountainView::Component.new("meta_header")
-    component.component_stubs.each do |component_properties|
-      test_properties =
-        component.remove_example_meta_properties component_properties
-      refute test_properties[:mv_title]
-      refute test_properties[:mv_description]
-      refute test_properties[:mv_classes]
-    end
-  end
+
+
 end
