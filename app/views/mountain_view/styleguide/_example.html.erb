@@ -1,11 +1,11 @@
 <pre>
-:meta: 'information about the component <%= component_name %>' # Optional
-:stubs: # As many as you need
+:meta: '<%= t('mountain_view.example.sample_meta', component_name: component_name) %>'
+:stubs: <%= t('mountain_view.example.stubs_note') %>
   -
     :id: 1
-    :title: "Some title"
-    :subtitle: "Some subtitle"
+    :title: <%= t('mountain_view.example.title_1') %>
+    :subtitle: <%= t('mountain_view.example.subtitle_1') %>
   -
     :id: 2
-    :title: "Another subtitle"
+    :title: <%= t('mountain_view.example.title_2') %>
 </pre>
