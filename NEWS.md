@@ -2,6 +2,11 @@
 
 User-visible changes worth mentioning.
 
+
+## Unreleased
+
+- [Improvement] I18n support in styleguide - Thanks #ChristinePanus - #79
+
 --
 ## 0.13.0 - 2018-03-19
 - [Feature] Add `rc` as an alias to `render_component` - Thanks @diegotoral - #66
