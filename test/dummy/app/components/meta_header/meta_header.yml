@@ -2,9 +2,10 @@
 :meta: 'This describes the use of components as a whole'
 :stubs:
   -
-    :mv_title: "Specific Example"
-    :mv_description: "This describes the use of this specific settings for the component"
-    :mv_classes: "mv--black-background"
+    :mv_stub_meta:
+      :title: "Specific Example"
+      :description: "This describes the use of this specific settings for the component"
+      :classes: "mv--black-background"
     :id: 1
     :title: "20 Mountains you didn't know they even existed"
     :subtitle: "Buzzfeed title"
