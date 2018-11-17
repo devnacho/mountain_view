@@ -84,7 +84,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
   def test_stubs_correct_format?
     component_with_correct_stubs = MountainView::Component.new('header')
     component_with_empty_stub_file = MountainView::Component
-                                         .new('breadcrumbs')
+                                     .new('breadcrumbs')
     component_without_stub_file =
       MountainView::Component.new('social_media_icons')
     component_with_stubs_but_old_syntax =
@@ -107,9 +107,9 @@ class MountainViewComponentTest < ActiveSupport::TestCase
   def test_stubs?
     component_with_stubs = MountainView::Component.new('header')
     component_without_stub_file = MountainView::Component
-                                      .new('social_media_icons')
+                                  .new('social_media_icons')
     component_with_empty_stub_file = MountainView::Component
-                                         .new('breadcrumbs')
+                                     .new('breadcrumbs')
 
     assert_equal true, component_with_stubs.stubs?
     assert_equal false, component_without_stub_file.stubs?

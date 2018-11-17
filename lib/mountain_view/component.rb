@@ -32,7 +32,7 @@ module MountainView
 
     def component_stubs_extended
       stub_array = []
-      component_stubs.each do | component_properties |
+      component_stubs.each do |component_properties|
         stub_array << MountainView::Stub.new(component_properties)
       end
       return stub_array
@@ -65,6 +65,5 @@ module MountainView
     def stubs_are_a_hash_with_info?
       styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)
     end
-
   end
 end
