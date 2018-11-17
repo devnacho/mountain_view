@@ -50,6 +50,12 @@ class MountainViewComponentTest < ActiveSupport::TestCase
                  'Array Length Mismatch in test_component_stubs_extended'
   end
 
+  def test_component_stubs_extended
+    component_with_stubs = MountainView::Component.new('header')
+
+    assert_equal 2, component_with_stubs.component_stubs_extended.length, 'Array Length Mismatch in test_component_stubs_extended'
+  end
+
   def test_stubs_extra_info
     component_with_extra_info = MountainView::Component.new('header')
     component_with_empty_stub_file =
