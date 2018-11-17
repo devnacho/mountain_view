@@ -9,7 +9,7 @@ module MountainView
 
     def meta_title(example_title, example_number)
       if @meta.key?(:title)
-        @meta.title
+        @meta[:title]
       else
         example_title + " " + (example_number + 1).to_s
       end
@@ -17,13 +17,13 @@ module MountainView
 
     def meta_description
       if @meta.key?(:description)
-        @meta.description
+        @meta[:description]
       end
     end
 
     def meta_classes
       if @meta.key?(:classes)
-        @meta.classes
+        @meta[:classes]
       end
     end
 
