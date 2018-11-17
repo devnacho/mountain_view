@@ -21,11 +21,11 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal expected_stub, component.styleguide_stubs
   end
 
-  def test_extracted_stubs
+  def test_component_stubs
     component = MountainView::Component.new('header')
     expected_stub = header_stub_only
-    assert_instance_of Array, component.extracted_stubs
-    assert_equal expected_stub, component.extracted_stubs
+    assert_instance_of Array, component.component_stubs
+    assert_equal expected_stub, component.component_stubs
   end
 
   def test_component_stubs?
@@ -40,6 +40,12 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_with_empty_stub_file.component_stubs?
     assert_equal true, component_with_stubs_but_incorrect_format
                            .component_stubs?
+  end
+
+  def test_component_stubs_extended
+    component_with_stubs = MountainView::Component.new('header')
+
+    assert_equal 2, component_with_stubs.component_stubs_extended.length, 'Array Length Mismatch in test_component_stubs_extended'
   end
 
   def test_stubs_extra_info
