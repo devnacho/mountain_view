@@ -17,6 +17,9 @@ en:
     example:
       sample_meta: "information about the component %{component_name} # Optional"
       stubs_note: "# As many as you need"
+      meta_title: '"Example Title"'
+      meta_description: '"Example description that gives details on each component use case, or specific UX guidance."'
+      meta_classes: '"Classes that affect the container surrounding the component in the style guide."'
       title_1: '"Some title"'
       subtitle_1: '"Some subtitle"'
       title_2: '"Another title"'

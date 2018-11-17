@@ -241,19 +241,29 @@ end
 
 To customize the styleguide, override the style guide layout by adding `mountain_view.html.erb` (or mountain_view.html.haml if using haml) to your application layouts folder in views. 
 
-### Custom meta data for stubs
+### Custom meta data for stub examples
 
 You can customize the title, description for each example in the stub, as well as the classes that surround the stub example.  In order to override the default title, add an `mv_title` key to the stub hash.  Additional special keys include `mv_description` which will add a description under the title for a given example and `mv_classes` which will add classes for a specific example. 
 
 E.g: `app/components/card/card.yml`
 ```yml
--
-  :mv_title: "Card Without Picture"
-  :mv_description: "These cards can be used on any background. Here is an example on a dark background"
-  :mv_classes: "mv--black-background"
-  :title: "Sunset on the Mountain"
-  :description: "Three major ranges of the Alps – the Northern Calcareous Alps, Central Alps, and Southern Calcareous Alps – run west to east through Austria. The Central Alps, which consist largely of a granite base, are the largest and highest ranges in Austria."
-  :link: "http://google.com"
+    -
+      :mv_stub_meta:
+        :title: "Specific Example"
+        :description: "Instructions for use case or other UX considerations"
+        :classes: "black-background"
+      :title: "Aspen Snowmass"
+      :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
+      :link: "http://google.com"
+      :image_url: "http://i.imgur.com/QzuIJTo.jpg"
+      :data:
+      -
+        :title: "Elevation"
+        :number: '7879ft'
+      -
+        :title: "Depth"
+        :number: '71"'
+
 
 ```
 
