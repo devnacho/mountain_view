@@ -63,6 +63,5 @@ module MountainView
     def stubs_are_a_hash_with_info?
       styleguide_stubs.is_a?(Hash) && styleguide_stubs.key?(:stubs)
     end
-
   end
 end
