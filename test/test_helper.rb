@@ -4,6 +4,9 @@ ENV['RAILS_ENV'] = 'test'
 require File.expand_path("dummy/config/environment.rb", __dir__)
 require "rails/test_help"
 
+require "minitest/reporters"
+Minitest::Reporters.use!
+
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
@@ -51,3 +54,4 @@ end
 def header_stub_first
   header_stub_only.first
 end
+
