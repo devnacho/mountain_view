@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 class MountainViewStubTest < ActiveSupport::TestCase
   def test_meta_title

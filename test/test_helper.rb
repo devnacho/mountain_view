@@ -10,7 +10,7 @@ Minitest::Reporters.use!
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
-Dir['#{File.dirname(__FILE__)}/support/**/*.rb'].each { |f| require f }
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 # Load fixtures from the engine
 if ActiveSupport::TestCase.method_defined?(:fixture_path=)
@@ -29,9 +29,9 @@ def header_stub_meta
         {
           mv_stub_meta:
             {
-                title: 'Specific Example',
-                description: 'Instructions for use case or other UX considerations',
-                classes: 'black-background'
+              title: 'Specific Example',
+              description: 'Instructions for use case and UX considerations',
+              classes: 'black-background'
             },
           id:  1,
           title: "20 Mountains you didn't know they even existed",
