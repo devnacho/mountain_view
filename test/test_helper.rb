@@ -14,11 +14,7 @@ Dir['#{File.dirname(__FILE__)}/support/**/*.rb'].each { |f| require f }
 
 # Load fixtures from the engine
 if ActiveSupport::TestCase.method_defined?(:fixture_path=)
-<<<<<<< HEAD
   ActiveSupport::TestCase.fixture_path = File.expand_path("fixtures", __dir__)
-=======
-  ActiveSupport::TestCase.fixture_path = File.expand_path('../fixtures', __FILE__)
->>>>>>> rubocop style changes and tests
 end
 # for generators
 require 'rails/generators/test_case'
