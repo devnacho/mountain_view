@@ -31,7 +31,6 @@ module MountainView
       extracted_stubs.each do | component_properties |
         stub_array << MountainView::Stub.new(component_properties)
       end
-      return stub_array
     end
 
     def component_stubs?
