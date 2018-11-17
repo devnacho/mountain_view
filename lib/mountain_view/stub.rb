@@ -1,6 +1,5 @@
 module MountainView
   class Stub
-    attr_reader :meta, :data
 
     def initialize(component_properties)
       @meta = component_properties[:mv_stub_meta] || {}
@@ -11,7 +10,7 @@ module MountainView
       if @meta.key?(:title)
         @meta[:title]
       else
-        example_title + " " + (example_number + 1).to_s
+        example_title + ' ' + (example_number + 1).to_s
       end
     end
 
@@ -25,6 +24,10 @@ module MountainView
       if @meta.key?(:classes)
         @meta[:classes]
       end
+    end
+
+    def properties
+      @data
     end
 
   end
