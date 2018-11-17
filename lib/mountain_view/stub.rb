@@ -29,6 +29,5 @@ module MountainView
     def properties
       @data
     end
-
   end
 end
