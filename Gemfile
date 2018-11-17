@@ -24,5 +24,3 @@ gem "rails", rails
 
 # To use debugger
 # gem 'debugger'
-gem 'tzinfo-data'
-gem 'minitest-reporters', '>= 0.5.0'
