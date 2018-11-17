@@ -4,6 +4,9 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path("../dummy/config/environment.rb",  __FILE__)
 require "rails/test_help"
 
+require "minitest/reporters"
+Minitest::Reporters.use!
+
 Rails.backtrace_cleaner.remove_silencers!
 
 # Load support files
@@ -17,3 +20,4 @@ end
 require "rails/generators/test_case"
 require "generators/mountain_view/component_generator"
 require "generators/mountain_view/extra_pages_generator"
+
