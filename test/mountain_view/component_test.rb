@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class MountainViewComponentTest < ActiveSupport::TestCase
@@ -39,13 +41,14 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal false, component_without_stub_file.component_stubs?
     assert_equal false, component_with_empty_stub_file.component_stubs?
     assert_equal true, component_with_stubs_but_incorrect_format
-                           .component_stubs?
+      .component_stubs?
   end
 
   def test_component_stubs_extended
     component_with_stubs = MountainView::Component.new('header')
 
-    assert_equal 2, component_with_stubs.component_stubs_extended.length, 'Array Length Mismatch in test_component_stubs_extended'
+    assert_equal 2, component_with_stubs.component_stubs_extended.length,
+                 'Array Length Mismatch in test_component_stubs_extended'
   end
 
   def test_stubs_extra_info
@@ -80,7 +83,8 @@ class MountainViewComponentTest < ActiveSupport::TestCase
 
   def test_stubs_correct_format?
     component_with_correct_stubs = MountainView::Component.new('header')
-    component_with_empty_stub_file = MountainView::Component.new('breadcrumbs')
+    component_with_empty_stub_file = MountainView::Component
+                                         .new('breadcrumbs')
     component_without_stub_file =
       MountainView::Component.new('social_media_icons')
     component_with_stubs_but_old_syntax =
@@ -102,12 +106,13 @@ class MountainViewComponentTest < ActiveSupport::TestCase
 
   def test_stubs?
     component_with_stubs = MountainView::Component.new('header')
-    component_without_stub_file = MountainView::Component.new('social_media_icons')
-    component_with_empty_stub_file = MountainView::Component.new('breadcrumbs')
+    component_without_stub_file = MountainView::Component
+                                      .new('social_media_icons')
+    component_with_empty_stub_file = MountainView::Component
+                                         .new('breadcrumbs')
 
     assert_equal true, component_with_stubs.stubs?
     assert_equal false, component_without_stub_file.stubs?
     assert_equal false, component_with_empty_stub_file.stubs?
   end
-
 end

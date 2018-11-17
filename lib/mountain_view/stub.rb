@@ -1,6 +1,5 @@
 module MountainView
   class Stub
-
     def initialize(component_properties)
       @meta = component_properties[:mv_stub_meta] || {}
       @data = component_properties.except(:mv_stub_meta) || {}
@@ -15,20 +14,15 @@ module MountainView
     end
 
     def meta_description
-      if @meta.key?(:description)
-        @meta[:description]
-      end
+      @meta[:description] if @meta.key?(:description)
     end
 
     def meta_classes
-      if @meta.key?(:classes)
-        @meta[:classes]
-      end
+      @meta[:classes] if @meta.key?(:classes)
     end
 
     def properties
       @data
     end
-
   end
 end
