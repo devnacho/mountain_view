@@ -10,7 +10,7 @@
       </div>
     <% end %>
     <% if @component.component_stubs? %>
-      <% @component.component_stubs.each_with_index do |component_stub, index| %>
+      <% @component.component_stubs_extended.each_with_index do |component_stub, index| %>
           <div class="mv-component">
             <div class="mv-component__item <%= component_stub.meta_classes %>">
               <%= render_component @component.name, component_stub.properties.clone %>
