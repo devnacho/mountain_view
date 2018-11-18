@@ -5,7 +5,7 @@ require 'test_helper'
 class ExtraPagesGeneratorTest < Rails::Generators::TestCase
   tests MountainView::Generators::ExtraPagesGenerator
 
-  destination File.expand_path("../../tmp", __FILE__)
+  destination File.expand_path('../tmp', __dir__)
   setup :prepare_destination
 
   test "Assert all views and controller are created" do

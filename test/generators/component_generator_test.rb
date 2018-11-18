@@ -3,7 +3,7 @@ require "test_helper"
 class ComponentGeneratorTest < Rails::Generators::TestCase
   tests MountainView::Generators::ComponentGenerator
 
-  destination File.expand_path("../../tmp", __FILE__)
+  destination File.expand_path('../tmp', __dir__)
   setup :prepare_destination
 
   test "Assert all files are properly created" do
@@ -12,7 +12,7 @@ class ComponentGeneratorTest < Rails::Generators::TestCase
     Rails.application.config.app_generators.stylesheet_engine nil
     Rails.application.config.app_generators.javascript_engine nil
 
-    run_generator %w( widget )
+    run_generator %w(widget)
 
     assert_file "app/components/widget/_widget.html.erb"
     assert_file "app/components/widget/widget.css"
@@ -25,7 +25,7 @@ class ComponentGeneratorTest < Rails::Generators::TestCase
     Rails.application.config.app_generators.stylesheet_engine :scss
     Rails.application.config.app_generators.javascript_engine :coffee
 
-    run_generator %w( widget )
+    run_generator %w(widget)
 
     assert_file "app/components/widget/_widget.html.haml"
     assert_file "app/components/widget/widget.scss"
