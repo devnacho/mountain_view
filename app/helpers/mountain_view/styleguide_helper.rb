@@ -1,7 +1,7 @@
 module MountainView
   module StyleguideHelper
     def method_missing(method, *args, &block)
-      if method.to_s.end_with?("_path") || method.to_s.end_with?("_url")
+      if method.to_s.end_with?("_path", "_url")
         if main_app.respond_to?(method)
           main_app.send(method, *args)
         else
@@ -13,7 +13,7 @@ module MountainView
     end
 
     def respond_to?(method, include_all = false)
-      if method.to_s.end_with?("_path") || method.to_s.end_with?("_url")
+      if method.to_s.end_with?("_path", "_url")
         if main_app.respond_to?(method, include_all)
           true
         else
@@ -22,6 +22,10 @@ module MountainView
       else
         super
       end
+    end
+
+    def respond_to_missing?(method, include_all = false)
+      respond_to?(method, include_all)
     end
 
     def prettify_word(word)
