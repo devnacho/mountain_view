@@ -24,3 +24,5 @@ gem "rails", rails
 
 # To use debugger
 # gem 'debugger'
+
+gem "rubocop", "0.59.2" # Fixed on this because of HoundCI
