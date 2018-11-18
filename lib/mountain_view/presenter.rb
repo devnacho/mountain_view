@@ -10,10 +10,10 @@ module MountainView
       @properties = default_properties.deep_merge(properties)
     end
 
-    def render(context, &block)
+    def render(context)
       context.extend ViewContext
       context.inject_component_context self
-      properties[:yield] ||= yield
+      properties[:yield] ||= yield if block_given?
       context.render partial, partial: partial
     end
 
@@ -53,6 +53,7 @@ module MountainView
       def define_property_methods(names = [])
         names.each do |name|
           next if method_defined?(name)
+
           define_method name do
             properties[name.to_sym]
           end
@@ -60,6 +61,7 @@ module MountainView
       end
     end
 
+    # :nodoc:
     module ViewContext
       attr_reader :_component
       delegate :properties, to: :_component
@@ -70,6 +72,7 @@ module MountainView
         methods = component.public_methods(false) - protected_methods
         methods.each do |meth|
           next if self.class.method_defined?(meth)
+
           self.class.delegate meth, to: :_component
         end
       end
