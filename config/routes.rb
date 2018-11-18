@@ -7,6 +7,7 @@ MountainView::Engine.routes.draw do
         as: "extra_pages"
   end
 
-  resources :styleguide, only: [:index, :show], path: MountainView.configuration.styleguide_path
+  resources :styleguide, only: [:index, :show],
+                         path: MountainView.configuration.styleguide_path
   extra_routes if MountainView.configuration.extra_pages.any?
 end
