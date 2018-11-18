@@ -1,0 +1,73 @@
+AllCops:
+  Exclude:
+    - 'test/dummy/**/*'
+  TargetRubyVersion: 2.2
+
+Layout/DotPosition:
+  Exclude:
+    - 'test/**/*'
+
+Lint/AmbiguousRegexpLiteral:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*'
+    - '*.gemspec'
+
+Metrics/ClassLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/LineLength:
+  Exclude:
+    - '*.gemspec'
+    - 'test/**/*'
+    - 'lib/generators/**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - 'test/**/*'
+
+Metrics/ModuleLength:
+  Exclude:
+    - 'test/**/*'
+
+Style/Alias:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/**/*'
+
+Style/Documentation:
+  Exclude:
+    - 'app/**/*'
+    - 'test/**/*'
+
+Style/EachWithObject:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Exclude:
+    - 'test/**/*'
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+  Exclude:
+    - 'test/**/*'
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Exclude:
+    - 'test/**/*'
+
+Style/WordArray:
+  Enabled: false
+
