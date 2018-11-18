@@ -21,11 +21,12 @@ class MountainViewComponentTest < ActiveSupport::TestCase
         stubs:
           [
             {
-              id:  1,
+              id: 1,
               title: "20 Mountains you didn't know they even existed",
               subtitle: "Buzzfeed title"
             },
-            { id: 2,
+            {
+              id: 2,
               title: "You won't believe what happened to this man at Aspen"
             }
           ]
