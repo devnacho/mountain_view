@@ -26,8 +26,5 @@ module MountainView
       @meta[:classes]
     end
 
-    def properties
-      @properties
-    end
   end
 end
