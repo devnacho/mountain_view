@@ -243,7 +243,7 @@ To customize the styleguide, override the style guide layout by adding `mountain
 
 ### Custom meta data for stub examples
 
-You can customize the title, description for each example in the stub, as well as the classes that surround the stub example.  In order to override the default title, add an `mv_title` key to the stub hash.  Additional special keys include `mv_description` which will add a description under the title for a given example and `mv_classes` which will add classes for a specific example. 
+You can customize the title, description for each example in the stub, as well as the classes that surround the stub example.  In order to override the default title, add a `title` key to the `mv_stub_meta` hash.  Additional special keys include `description` which will add a description under the title for a given example and `classes` which will add classes for a specific example. 
 
 E.g: `app/components/card/card.yml`
 ```yml
