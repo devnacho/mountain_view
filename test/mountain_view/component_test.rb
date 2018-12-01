@@ -16,7 +16,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
   end
 
   def test_styleguide_stubs
-    component = MountainView::Component.new('header')
+    component = MountainView::Component.new("header")
     expected_stub = header_stub_meta
 
     assert_instance_of Hash, component.styleguide_stubs
