@@ -3,6 +3,8 @@
 module MountainView
   # Manage the information for a specific example stub in the style guide
   class Stub
+    attr_reader :properties, :meta
+
     def initialize(component_properties)
       @meta = component_properties[:mv_stub_meta] || {}
       @properties = component_properties.except(:mv_stub_meta) || {}
@@ -24,8 +26,5 @@ module MountainView
       @meta[:classes]
     end
 
-    def properties
-      @properties
-    end
   end
 end
