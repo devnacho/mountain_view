@@ -31,11 +31,9 @@ module MountainView
     end
 
     def component_stubs_extended
-      stub_array = []
-      component_stubs.each do |component_properties|
-        stub_array << MountainView::Stub.new(component_properties)
+      component_stubs.map do |component_properties|
+        MountainView::Stub.new(component_properties)
       end
-      return stub_array
     end
 
     def stubs_file
