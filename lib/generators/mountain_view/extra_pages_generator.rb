@@ -12,6 +12,7 @@ module MountainView
         extra_pages.each do |page|
           file_name = "#{views_folder}/#{page}.html.#{template_engine}"
           next if File.exist?(file_name)
+
           create_file file_name
         end
       end

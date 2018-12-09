@@ -1,6 +1,7 @@
 require "rails"
 
 module MountainView
+  # :nodoc:
   class Engine < ::Rails::Engine
     isolate_namespace MountainView
 
@@ -16,14 +17,14 @@ module MountainView
       app.config.autoload_paths += Dir[component_paths]
     end
 
-    initializer "mountain_view.assets" do |app|
+    initializer "mountain_view.assets" do |_app|
       Rails.application.config.assets.paths <<
         MountainView.configuration.components_path
-      Rails.application.config.assets.precompile += %w( mountain_view/styleguide.css
-                                                        mountain_view/styleguide.js )
+      Rails.application.config.assets.precompile +=
+        %w[mountain_view/styleguide.css mountain_view/styleguide.js]
     end
 
-    initializer "mountain_view.append_view_paths" do |app|
+    initializer "mountain_view.append_view_paths" do |_app|
       ActiveSupport.on_load :action_controller do
         append_view_path MountainView.configuration.components_path
       end
