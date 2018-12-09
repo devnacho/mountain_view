@@ -23,7 +23,7 @@ class MountainViewComponentTest < ActiveSupport::TestCase
     assert_equal expected_stub, component.styleguide_stubs
   end
 
- def test_component_stubs
+  def test_component_stubs
     component = MountainView::Component.new('header')
     expected_stub = header_stub_only
     assert_instance_of Array, component.component_stubs
