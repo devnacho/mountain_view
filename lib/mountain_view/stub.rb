@@ -14,7 +14,7 @@ module MountainView
       if @meta.key?(:title)
         @meta[:title]
       else
-        example_title + ' ' + (example_number + 1).to_s
+        example_title + " " + (example_number + 1).to_s
       end
     end
 
@@ -25,6 +25,5 @@ module MountainView
     def meta_classes
       @meta[:classes]
     end
-
   end
 end

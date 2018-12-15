@@ -17,8 +17,6 @@ end
 require 'rails/generators/test_case'
 require 'generators/mountain_view/component_generator'
 require 'generators/mountain_view/extra_pages_generator'
-
-# rubocop:disable Metrics/MethodLength
 def header_stub_meta
   {
     meta: 'There is this different classes',
@@ -42,7 +40,6 @@ def header_stub_meta
       ]
   }
 end
-# rubocop:enable Metrics/MethodLength
 
 def header_stub_only
   header_stub_meta[:stubs]
