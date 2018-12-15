@@ -7,6 +7,10 @@ User-visible changes worth mentioning.
 
 - [Feature] Support custom example's title, description, and HTML classes - Thanks @ChristinePanus - #81
 - [Improvement] I18n support in styleguide - Thanks @ChristinePanus - #79
+- [Internal change] Make `component_stubs` return array of `MountainView::Stub`,
+  that has `#properties` and `#meta` information. If you're customizing your
+  own styleguide this may break some things. Please refer to changelog between
+  0.13 and 0.14 for changes.
 
 --
 ## 0.13.0 - 2018-03-19
