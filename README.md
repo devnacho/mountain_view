@@ -235,6 +235,37 @@ MountainView.configure do |config|
 end
 ```
 
+## Customizing Look and Feel
+
+### Customizing the style guide
+
+To customize the styleguide, override the style guide layout by adding `mountain_view.html.erb` (or mountain_view.html.haml if using haml) to your application layouts folder in views. 
+
+### Custom meta data for stub examples
+
+You can customize the title, description for each example in the stub, as well as the classes that surround the stub example.  In order to override the default title, add a `title` key to the `mv_stub_meta` hash.  Additional special keys include `description` which will add a description under the title for a given example and `classes` which will add classes for a specific example. 
+
+E.g: `app/components/card/card.yml`
+```yml
+    -
+      :mv_stub_meta:
+        :title: "Specific Example"
+        :description: "Instructions for use case or other UX considerations"
+        :classes: "black-background"
+      :title: "Aspen Snowmass"
+      :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
+      :link: "http://google.com"
+      :image_url: "http://i.imgur.com/QzuIJTo.jpg"
+      :data:
+      -
+        :title: "Elevation"
+        :number: '7879ft'
+      -
+        :title: "Depth"
+        :number: '71"'
+```
+
+
 ## Improving performance
 Rendering a large amount of partials in a request can lead to a performance bottleneck, usually this is caused by the parsing and rendering of template code such as ERB or HAML.
 

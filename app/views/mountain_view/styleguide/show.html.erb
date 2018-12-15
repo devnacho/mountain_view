@@ -10,17 +10,21 @@
       </div>
     <% end %>
     <% if @component.component_stubs? %>
-      <% @component.component_stubs.each_with_index do |component_properties, index| %>
+      <% @component.component_stubs_extended.each_with_index do |component_stub, index| %>
           <div class="mv-component">
-            <div class="mv-component__item">
-              <%= render_component @component.name, component_properties.clone %>
+            <div class="mv-component__item <%= component_stub.meta_classes %>">
+              <%= render_component @component.name, component_stub.properties.clone %>
             </div>
             <div class="mv-component__description">
-              <h2><%= @component.title %> <%= index + 1 %></h2>
+              <h2><%= component_stub.meta_title(@component.title, index) %></h2>
+              <% unless component_stub.meta_description.blank? %>
+                <p><%= component_stub.meta_description %></p>
+                <br />
+              <% end %>
               <div class="mv-component__description__definition">
                 <code class="language-ruby">&lt;%= render_component("<%= @component.name %>", {properties as below}) %&gt;</code>
               </div>
-              <%- formatted = JSON.pretty_generate component_properties %>
+              <%- formatted = JSON.pretty_generate component_stub.properties %>
               <div class="mv-component__description__properties">
                 <code class="language-ruby"><%= formatted.gsub(/\"(\S+)?\":/, '\1:') %></code>
               </div>

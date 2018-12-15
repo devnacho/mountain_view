@@ -18,14 +18,22 @@ module MountainView
 
     def component_stubs
       if styleguide_stubs.is_a?(Hash)
+        # Stub is coming from Style Guide example file
         styleguide_stubs[:stubs] || {}
       elsif styleguide_stubs.is_a?(Array)
+        # Stub is coming from use of component
         styleguide_stubs
       end
     end
 
     def component_stubs?
       component_stubs.any?
+    end
+
+    def component_stubs_extended
+      component_stubs.map do |component_properties|
+        MountainView::Stub.new(component_properties)
+      end
     end
 
     def stubs_file
