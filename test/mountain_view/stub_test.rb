@@ -44,6 +44,6 @@ class MountainViewStubTest < ActiveSupport::TestCase
   private
 
   def stub_to_test
-    MountainView::Component.new('header').component_stubs_extended
+    MountainView::Component.new('header').component_stubs
   end
 end
