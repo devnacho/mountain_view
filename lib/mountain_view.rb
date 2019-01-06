@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 require "mountain_view/version"
 require "mountain_view/configuration"
 require "mountain_view/presenter"
 require "mountain_view/component"
+require "mountain_view/stub"
 
 module MountainView
   def self.configuration
