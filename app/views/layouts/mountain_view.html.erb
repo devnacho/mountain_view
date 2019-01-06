@@ -10,7 +10,7 @@
 <body>
   <div class="mv-header">
     <div class="mv-header__logo">
-      <% if respond_to? :mv_style_guide %>
+      <% if respond_to? mv_style_guide %>
         <%= link_to t('mountain_view.layout.styleguide_title'), mv_style_guide.root_url%>
       <% else %>
         <%= t('mountain_view.layout.styleguide_title') %>
