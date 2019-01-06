@@ -1,10 +1,11 @@
-:meta: 'There is this different classes'
+:title: 'My Meta Header'
+:meta: 'This describes the use of components as a whole'
 :stubs:
   -
     :mv_stub_meta:
       :title: "Specific Example"
-      :description: "Instructions for use case and UX considerations"
-      :classes: "black-background"
+      :description: "This describes the use of this specific settings for the component"
+      :classes: "mv--black-background"
     :id: 1
     :title: "20 Mountains you didn't know they even existed"
     :subtitle: "Buzzfeed title"
