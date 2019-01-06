@@ -188,7 +188,7 @@ A style guide will be automatically generated. This style guide never falls behi
 #### Setting up the style guide
 1) Add the following line to your `routes.rb` file. `/mountain_view` can be any path you want. 
     ```ruby
-    mount MountainView::Engine => "/mountain_view", as: mv_style_guide
+    mount MountainView::Engine => "/mountain_view", as: "mv_style_guide"
     ```
     
     Note: Adding `as: :mv_style_guide` is needed to establish a consistent name for the style guide to provide a link to the main page.

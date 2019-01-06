@@ -10,7 +10,7 @@
 <body>
   <div class="mv-header">
     <div class="mv-header__logo">
-      <% if respond_to? mv_style_guide %>
+      <% if Rails.application.routes.url_helpers.respond_to?("mv_style_guide_path") %>
         <%= link_to t('mountain_view.layout.styleguide_title'), mv_style_guide.root_url%>
       <% else %>
         <%= t('mountain_view.layout.styleguide_title') %>
