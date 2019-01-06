@@ -1,12 +1,10 @@
-<div class="mv-main__header">
-  <h1><%= t('.mountain_view.layout.styleguide_title') %></h1>
-</div>
-
 <% if mv_components.any? %>
-  <div class="mv-main__description">
-    <%= t('mountain_view.index.description') %>
-  </div>
+  <%= render 'mountain_view/styleguide/main_page_content'  %>
 <% else %>
+  <div class="mv-main__header">
+    <h1><%= t('.mountain_view.layout.styleguide_title') %></h1>
+  </div>
+
   <div class="mv-hint">
     <h2><%= t('mountain_view.index.hint_component_html') %></h2>
     <ul>

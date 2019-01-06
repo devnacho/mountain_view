@@ -24,6 +24,11 @@ body{
   font-size: 20px;
 }
 
+.mv-header__logo a, .mv-header__logo a:visited{
+    color: white;
+    text-decoration: none;
+}
+
 /* FlEX WRAPPER */
 
 .mv-flex-wrapper{

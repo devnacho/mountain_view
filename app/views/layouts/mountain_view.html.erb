@@ -9,7 +9,13 @@
 </head>
 <body>
   <div class="mv-header">
-    <div class="mv-header__logo"><%= t('mountain_view.layout.styleguide_title') %></div>
+    <div class="mv-header__logo">
+      <% if respond_to? mv_style_guide %>
+        <%= link_to t('mountain_view.layout.styleguide_title'), mv_style_guide.root_url%>
+      <% else %>
+        <%= t('mountain_view.layout.styleguide_title') %>
+      <% end %>
+    </div>
   </div>
   <div class="mv-flex-wrapper">
     <div class="mv-sidebar">

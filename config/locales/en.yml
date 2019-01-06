@@ -10,7 +10,13 @@ en:
       hint_stub_creation_html: <span>Hint:</span>To see your component make sure you've created stubs
       tip_stub_creation_html: 'You should write stub examples here:'
     index:
-      description: Select one of the components from the side to view its examples and documentation.
+      description_html:
+        <p>Select one of the components from the side to view its examples and documentation.</p>
+        <br />
+        <br />
+        <p>To replace the content on this page, add the directory `app/views/mountain_view` in your application,
+        and create a partial named <code class="language-ruby">_styleguide_intro.html.erb</code> or
+        <code class="language-ruby">_styleguide_intro.html.haml</code> whichever you prefer.</p>
       hint_component_html: <span>Hint:</span>You haven't created any components yet
       tip_first_component_html: 'You can generate your first component by running:'
       tip_second_component_html: 'Or manually create the following files:'
