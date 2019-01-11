@@ -187,35 +187,35 @@ A style guide will be automatically generated. This style guide never falls behi
 
 #### Setting up the style guide
 1) Add the following line to your `routes.rb` file. `/mountain_view` can be any path you want. 
-    ```ruby
-    mount MountainView::Engine => "/mountain_view", as: "mv_style_guide"
-    ```
-    
-    Note: Adding `as: :mv_style_guide` is needed to establish a consistent name for the style guide to provide a link to the main page.
+```ruby
+mount MountainView::Engine => "/mountain_view", as: "mv_style_guide"
+```
+
+Note: Adding `as: :mv_style_guide` is needed to establish a consistent name for the style guide to provide a link to the main page.
 
 2) Create stubs for your components. These stubs will be the examples in the style guide.
 
-    E.g: `app/components/card/card.yml`
-    
-    ```yml
-        -
-          :title: "Aspen Snowmass"
-          :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
-          :link: "http://google.com"
-          :image_url: "http://i.imgur.com/QzuIJTo.jpg"
-          :data:
-          -
-            :title: "Elevation"
-            :number: '7879ft'
-          -
-            :title: "Depth"
-            :number: '71"'
-        -
-          :title: "Sunset on the Mountain"
-          :description: "Three major ranges of the Alps – the Northern Calcareous Alps, Central Alps, and Southern Calcareous Alps – run west to east through Austria. The Central Alps, which consist largely of a granite base, are the largest and highest ranges in Austria."
-          :link: "http://google.com"
-    
-    ```
+E.g: `app/components/card/card.yml`
+
+```yml
+    -
+      :title: "Aspen Snowmass"
+      :description: "Aspen Snowmass is a winter resort complex located in Pitkin County in western Colorado in the United States. Owned and operated by the Aspen Skiing Company it comprises four skiing/snowboarding areas on four adjacent mountains in the vicinity of the towns of Aspen and Snowmass Village."
+      :link: "http://google.com"
+      :image_url: "http://i.imgur.com/QzuIJTo.jpg"
+      :data:
+      -
+        :title: "Elevation"
+        :number: '7879ft'
+      -
+        :title: "Depth"
+        :number: '71"'
+    -
+      :title: "Sunset on the Mountain"
+      :description: "Three major ranges of the Alps – the Northern Calcareous Alps, Central Alps, and Southern Calcareous Alps – run west to east through Austria. The Central Alps, which consist largely of a granite base, are the largest and highest ranges in Austria."
+      :link: "http://google.com"
+
+```
 3) Visit `http://localhost:3000/mountain_view/styleguide`
 
 #### Example Style Guide
