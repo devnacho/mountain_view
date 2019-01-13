@@ -26,3 +26,4 @@ gem "rails", rails
 # gem 'debugger'
 
 gem "rubocop", "0.59.2" # Fixed on this because of HoundCI
+gem "tzinfo-data", platforms: [:mingw, :x64_mingw, :mswin]
