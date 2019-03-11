@@ -17,7 +17,7 @@
             <%= render_component @component.name, component_stub.properties.clone %>
           </div>
           <div class="mv-component__description">
-            <h3>Instructions for use</h3>
+            <h3><%= t('mountain_view.show.instruction_heading') %></h3>
             <% unless component_stub.meta_description.blank? %>
               <p><%= component_stub.meta_description %></p>
               <br />
