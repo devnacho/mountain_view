@@ -2,8 +2,11 @@
 
 User-visible changes worth mentioning.
 
-
 ## Unreleased
+- [Improvement] Setup the Logo so it will link back to the main page. - Thanks ChristineP2 - #85
+- [Improvement] Move title for show view. - Thanks ChristineP2 - #87
+
+## 0.14.0 - 2018-12-15
 
 - [Feature] Support custom example's title, description, and HTML classes - Thanks @ChristinePanus - #81
 - [Improvement] I18n support in styleguide - Thanks @ChristinePanus - #79
